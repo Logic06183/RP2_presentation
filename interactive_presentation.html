@@ -339,7 +339,8 @@
                 </div>
                 <div style="text-align: center; margin-top: 2rem;">
                     <strong>15-Minute Plenary Session | DSI-Africa Conference 2025</strong><br>
-                    <em>Panellist: Matthew Chersich (HE2AT) | Craig Parker, PhD Candidate (Wits SPH)</em>
+                    <em>Presenter: Prof. Guéladio Cissé (CSRS, Côte d'Ivoire & Swiss TPH)</em><br>
+                    <small>Research by: Craig Parker, PhD Candidate (Wits SPH) | HE2AT Center</small>
                 </div>
             </div>
         </div>
@@ -367,7 +368,7 @@
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f39c12; color: white; border-radius: 15px; font-size: 1.5rem; font-weight: 600;">
-                    🎯 Key Gap: No comprehensive heat-health frameworks for African megacities
+                    Key Gap: No comprehensive heat-health frameworks for African megacities
                 </div>
             </div>
         </div>
@@ -402,7 +403,7 @@
                 <h2>Initial Findings: Heat Exposure Patterns</h2>
                 <div class="city-comparison">
                     <div class="city-card johannesburg">
-                        <h3>🏙️ Johannesburg Profile</h3>
+                        <h3>Johannesburg Profile</h3>
                         <ul class="bullet-points" style="text-align: left; color: white;">
                             <li>Research ratio: 1.3x more participants than Abidjan</li>
                             <li>Moderate heat stress with high vulnerability</li>
@@ -411,7 +412,7 @@
                         </ul>
                     </div>
                     <div class="city-card abidjan">
-                        <h3>🌴 Abidjan Profile</h3>
+                        <h3>Abidjan Profile</h3>
                         <ul class="bullet-points" style="text-align: left; color: white;">
                             <li>Higher baseline temperatures year-round</li>
                             <li>Severe urban heat island effects</li>
@@ -421,7 +422,7 @@
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: #27ae60; color: white; border-radius: 15px; font-size: 1.3rem;">
-                    💡 <strong>Key Insight:</strong> Similar participant burden despite different climate zones
+                    <strong>Key Insight:</strong> Similar participant burden despite different climate zones
                 </div>
             </div>
         </div>
@@ -432,14 +433,14 @@
                 <h2>Data Integration Approach</h2>
                 <div class="two-column">
                     <div>
-                        <h3>🏥 Health Data</h3>
+                        <h3>Health Data</h3>
                         <ul class="bullet-points">
                             <li>7,000-9,000 individual clinical records</li>
                             <li>Cardiovascular, metabolic, inflammatory markers</li>
                             <li>Heat-sensitive physiological indicators</li>
                         </ul>
                         
-                        <h3 style="margin-top: 2rem;">🛰️ Environmental Data</h3>
+                        <h3 style="margin-top: 2rem;">Environmental Data</h3>
                         <ul class="bullet-points">
                             <li>Satellite imagery (Landsat, Sentinel-2, MODIS)</li>
                             <li>Land surface temperature measurements</li>
@@ -447,7 +448,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h3>🏘️ Socioeconomic Data</h3>
+                        <h3>Socioeconomic Data</h3>
                         <ul class="bullet-points">
                             <li>GCRO Quality of Life Surveys</li>
                             <li>135 Johannesburg wards (complete coverage)</li>
@@ -496,7 +497,7 @@
                 </div>
                 <div style="text-align: center; margin-top: 3rem;">
                     <div style="background: #34495e; color: white; padding: 2rem; border-radius: 15px; display: inline-block;">
-                        <h3 style="color: #3498db; margin-bottom: 1rem;">📅 Timeline</h3>
+                        <h3 style="color: #3498db; margin-bottom: 1rem;">Timeline</h3>
                         <strong>36-month PhD with quarterly milestones</strong><br>
                         <em>Next milestone: Vulnerability mapping completion (Month 18)</em>
                     </div>
@@ -547,37 +548,37 @@
         // Initialize slide counter
         document.getElementById('totalSlides').textContent = totalSlides;
         
-        // Load SVG files and embed them
-        async function loadSVGs() {
-            try {
-                // Load study distribution chart
-                const studyResponse = await fetch('study_distribution_chart.svg');
-                const studyText = await studyResponse.text();
-                document.getElementById('studyDistributionChart').innerHTML = studyText;
+        // Load PNG images and embed them
+        function loadImages() {
+            // Load available PNG images
+            const imageMap = {
+                'studyDistributionChart': 'image.png',
+                'climateComparisonChart': 'image copy.png', 
+                'researchPortfolioChart': 'image copy 2.png',
+                'methodologyFlowChart': 'image copy 3.png'
+            };
+            
+            Object.keys(imageMap).forEach(containerId => {
+                const container = document.getElementById(containerId);
+                const img = document.createElement('img');
+                img.src = imageMap[containerId];
+                img.style.maxWidth = '100%';
+                img.style.maxHeight = '100%';
+                img.style.objectFit = 'contain';
+                img.alt = `${containerId} visualization`;
                 
-                // Load climate comparison chart
-                const climateResponse = await fetch('climate_comparison_infographic.svg');
-                const climateText = await climateResponse.text();
-                document.getElementById('climateComparisonChart').innerHTML = climateText;
+                img.onload = () => {
+                    container.innerHTML = '';
+                    container.appendChild(img);
+                };
                 
-                // Load research portfolio chart
-                const portfolioResponse = await fetch('research_portfolio_breakdown.svg');
-                const portfolioText = await portfolioResponse.text();
-                document.getElementById('researchPortfolioChart').innerHTML = portfolioText;
-                
-                // Load methodology flow chart
-                const methodologyResponse = await fetch('research_methodology_flow.svg');
-                const methodologyText = await methodologyResponse.text();
-                document.getElementById('methodologyFlowChart').innerHTML = methodologyText;
-                
-            } catch (error) {
-                console.warn('Could not load SVG files:', error);
-                // Add placeholder content if SVGs can't be loaded
-                document.getElementById('studyDistributionChart').innerHTML = '<div style="text-align: center; color: #7f8c8d; font-size: 1.5rem;">Study Distribution Visualization<br><em>(SVG will load here)</em></div>';
-                document.getElementById('climateComparisonChart').innerHTML = '<div style="text-align: center; color: #7f8c8d; font-size: 1.5rem;">Climate Comparison Visualization<br><em>(SVG will load here)</em></div>';
-                document.getElementById('researchPortfolioChart').innerHTML = '<div style="text-align: center; color: #7f8c8d; font-size: 1.5rem;">Research Portfolio Visualization<br><em>(SVG will load here)</em></div>';
-                document.getElementById('methodologyFlowChart').innerHTML = '<div style="text-align: center; color: #7f8c8d; font-size: 1.5rem;">Methodology Flow Visualization<br><em>(SVG will load here)</em></div>';
-            }
+                img.onerror = () => {
+                    container.innerHTML = `<div style="text-align: center; color: #7f8c8d; font-size: 1.5rem;">
+                        ${containerId.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())} Visualization<br>
+                        <em>(Image: ${imageMap[containerId]})</em>
+                    </div>`;
+                };
+            });
         }
 
         function updateSlide() {
@@ -627,7 +628,7 @@
 
         // Initialize presentation
         window.addEventListener('load', function() {
-            loadSVGs();
+            loadImages();
             updateSlide();
         });
 

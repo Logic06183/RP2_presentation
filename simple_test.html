@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Presentation Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .pass { background: #d4edda; border-left: 5px solid #28a745; }
+        .fail { background: #f8d7da; border-left: 5px solid #dc3545; }
+        .warning { background: #fff3cd; border-left: 5px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Presentation Test Results</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        function addResult(message, type = 'pass') {
+            const div = document.createElement('div');
+            div.className = `test-result ${type}`;
+            div.innerHTML = message;
+            results.appendChild(div);
+        }
+        
+        // Test 1: Check if main presentation file exists
+        fetch('interactive_presentation.html')
+            .then(response => {
+                if (response.ok) {
+                    addResult('✅ Main presentation file accessible', 'pass');
+                } else {
+                    addResult('❌ Main presentation file not found', 'fail');
+                }
+            })
+            .catch(() => addResult('❌ Error accessing main presentation file', 'fail'));
+        
+        // Test 2: Check SVG files
+        const svgFiles = [
+            'study_distribution_chart.svg',
+            'research_methodology_flow.svg', 
+            'climate_comparison_infographic.svg',
+            'research_portfolio_breakdown.svg'
+        ];
+        
+        svgFiles.forEach(file => {
+            fetch(file)
+                .then(response => {
+                    if (response.ok) {
+                        addResult(`✅ ${file} accessible`, 'pass');
+                    } else {
+                        addResult(`⚠️ ${file} not found`, 'warning');
+                    }
+                })
+                .catch(() => addResult(`❌ Error accessing ${file}`, 'fail'));
+        });
+        
+        // Test 3: Basic JavaScript functionality
+        try {
+            const testSlides = document.querySelectorAll('.test-slide');
+            addResult('✅ JavaScript querySelector working', 'pass');
+        } catch (error) {
+            addResult('❌ JavaScript error: ' + error.message, 'fail');
+        }
+        
+        // Test 4: CSS compatibility
+        const testDiv = document.createElement('div');
+        testDiv.style.transform = 'translateX(100%)';
+        testDiv.style.transition = 'all 0.5s ease-in-out';
+        testDiv.style.opacity = '0';
+        
+        if (testDiv.style.transform && testDiv.style.transition && testDiv.style.opacity) {
+            addResult('✅ CSS animations supported', 'pass');
+        } else {
+            addResult('⚠️ Some CSS features may not be supported', 'warning');
+        }
+        
+        // Summary
+        setTimeout(() => {
+            addResult('<h3>📋 Test Summary</h3><p>The presentation should work in modern browsers. If SVG files show warnings, they will display placeholder content instead.</p>', 'pass');
+        }, 1000);
+    </script>
+</body>
+</html>
