@@ -1,0 +1,124 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#2c3e50">
+    Three-Phase Analytical Framework
+  </text>
+  
+  <!-- Phase 1: Vulnerability Mapping -->
+  <g transform="translate(50, 80)">
+    <rect width="240" height="150" fill="#3498db" rx="15" stroke="#2980b9" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#ffffff"/>
+    <text x="30" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3498db">1</text>
+    
+    <text x="120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      Vulnerability Mapping
+    </text>
+    <text x="120" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ecf0f1">
+      (Descriptive)
+    </text>
+    
+    <text x="20" y="80" font-family="Arial, sans-serif" font-size="12" fill="white">• Geographically Weighted PCA</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="white">• Local Spatial Association</text>
+    <text x="20" y="120" font-family="Arial, sans-serif" font-size="12" fill="white">• Non-stationarity Analysis</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 310 155 L 350 155" stroke="#34495e" stroke-width="4" marker-end="url(#arrowhead)" fill="none"/>
+  
+  <!-- Phase 2: Heat-Health Dynamics -->
+  <g transform="translate(370, 80)">
+    <rect width="240" height="150" fill="#e67e22" rx="15" stroke="#d35400" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#ffffff"/>
+    <text x="30" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#e67e22">2</text>
+    
+    <text x="120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      Heat-Health Dynamics
+    </text>
+    <text x="120" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fdf2e9">
+      (Explanatory)
+    </text>
+    
+    <text x="20" y="80" font-family="Arial, sans-serif" font-size="12" fill="white">• Two-stage Analysis</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="white">• SHAP/LIME Interpretation</text>
+    <text x="20" y="120" font-family="Arial, sans-serif" font-size="12" fill="white">• Causal Machine Learning</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M 630 155 L 670 155" stroke="#34495e" stroke-width="4" marker-end="url(#arrowhead)" fill="none"/>
+  
+  <!-- Phase 3: Predictive Modeling -->
+  <g transform="translate(690, 80)">
+    <rect width="240" height="150" fill="#27ae60" rx="15" stroke="#229954" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#ffffff"/>
+    <text x="30" y="37" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#27ae60">3</text>
+    
+    <text x="120" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      Predictive Modeling
+    </text>
+    <text x="120" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#e8f5e8">
+      (Predictive)
+    </text>
+    
+    <text x="20" y="80" font-family="Arial, sans-serif" font-size="12" fill="white">• Ensemble Machine Learning</text>
+    <text x="20" y="100" font-family="Arial, sans-serif" font-size="12" fill="white">• Uncertainty Quantification</text>
+    <text x="20" y="120" font-family="Arial, sans-serif" font-size="12" fill="white">• 24-72 Hour Forecasting</text>
+  </g>
+  
+  <!-- Data Sources -->
+  <g transform="translate(100, 280)">
+    <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
+      Integrated Data Sources
+    </text>
+    
+    <!-- Health Data -->
+    <rect x="50" y="50" width="180" height="100" fill="#16a085" rx="10"/>
+    <text x="140" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      Health Data
+    </text>
+    <text x="60" y="95" font-family="Arial, sans-serif" font-size="11" fill="white">• Clinical Cohorts</text>
+    <text x="60" y="110" font-family="Arial, sans-serif" font-size="11" fill="white">• Lab Biomarkers</text>
+    <text x="60" y="125" font-family="Arial, sans-serif" font-size="11" fill="white">• 7,000-9,000 participants</text>
+    
+    <!-- Environmental Data -->
+    <rect x="260" y="50" width="180" height="100" fill="#8e44ad" rx="10"/>
+    <text x="350" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      Environmental Data
+    </text>
+    <text x="270" y="95" font-family="Arial, sans-serif" font-size="11" fill="white">• Satellite Imagery</text>
+    <text x="270" y="110" font-family="Arial, sans-serif" font-size="11" fill="white">• Climate Data</text>
+    <text x="270" y="125" font-family="Arial, sans-serif" font-size="11" fill="white">• Heat Island Mapping</text>
+    
+    <!-- Socioeconomic Data -->
+    <rect x="470" y="50" width="180" height="100" fill="#c0392b" rx="10"/>
+    <text x="560" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      Socioeconomic Data
+    </text>
+    <text x="480" y="95" font-family="Arial, sans-serif" font-size="11" fill="white">• GCRO Surveys</text>
+    <text x="480" y="110" font-family="Arial, sans-serif" font-size="11" fill="white">• Housing Quality</text>
+    <text x="480" y="125" font-family="Arial, sans-serif" font-size="11" fill="white">• 135 Johannesburg wards</text>
+  </g>
+  
+  <!-- Outputs -->
+  <g transform="translate(200, 450)">
+    <rect width="500" height="80" fill="#f39c12" rx="15"/>
+    <text x="250" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      Expected Outputs
+    </text>
+    <text x="80" y="50" font-family="Arial, sans-serif" font-size="14" fill="white">• Vulnerability Maps</text>
+    <text x="250" y="50" font-family="Arial, sans-serif" font-size="14" fill="white">• Causal Pathways</text>
+    <text x="400" y="50" font-family="Arial, sans-serif" font-size="14" fill="white">• Early Warning System</text>
+    <text x="150" y="70" font-family="Arial, sans-serif" font-size="14" fill="white">• Intervention Targeting</text>
+    <text x="350" y="70" font-family="Arial, sans-serif" font-size="14" fill="white">• Risk Forecasting</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34495e"/>
+    </marker>
+  </defs>
+</svg>

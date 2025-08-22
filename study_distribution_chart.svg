@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
+    Study Distribution: Johannesburg vs Abidjan
+  </text>
+  
+  <!-- Johannesburg Bar -->
+  <rect x="100" y="100" width="300" height="80" fill="#3498db" rx="5"/>
+  <text x="250" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    Johannesburg: 15 Studies
+  </text>
+  <text x="420" y="150" font-family="Arial, sans-serif" font-size="16" fill="#2c3e50">
+    11,800 participants (56.3%)
+  </text>
+  
+  <!-- Abidjan Bar -->
+  <rect x="100" y="200" width="200" height="80" fill="#e74c3c" rx="5"/>
+  <text x="200" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    Abidjan: 8 Studies
+  </text>
+  <text x="320" y="250" font-family="Arial, sans-serif" font-size="16" fill="#2c3e50">
+    9,162 participants (43.7%)
+  </text>
+  
+  <!-- Climate Info -->
+  <g transform="translate(100, 320)">
+    <rect width="600" height="120" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2" rx="10"/>
+    
+    <!-- Johannesburg Climate -->
+    <circle cx="150" cy="40" r="20" fill="#3498db"/>
+    <text x="150" y="47" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">JHB</text>
+    <text x="180" y="30" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">Subtropical Highland (1,753m)</text>
+    <text x="180" y="45" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">Heat Risk: High</text>
+    <text x="180" y="60" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">Peak: Dec-Feb</text>
+    
+    <!-- Abidjan Climate -->
+    <circle cx="150" cy="90" r="20" fill="#e74c3c"/>
+    <text x="150" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">ABJ</text>
+    <text x="180" y="80" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">Tropical Savanna (76m)</text>
+    <text x="180" y="95" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">Heat Risk: Very High</text>
+    <text x="180" y="110" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">Peak: Feb-Apr</text>
+  </g>
+  
+  <!-- Total Summary -->
+  <rect x="500" y="100" width="200" height="180" fill="#f39c12" rx="10"/>
+  <text x="600" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    Total Dataset
+  </text>
+  <text x="600" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+    23 Studies
+  </text>
+  <text x="600" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+    20,962
+  </text>
+  <text x="600" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="white">
+    Participants
+  </text>
+  <text x="600" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    2000-2022
+  </text>
+</svg>

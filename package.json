@@ -1,0 +1,23 @@
+{
+  "name": "rp2_presentation",
+  "version": "1.0.0",
+  "main": "test_presentation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Logic06183/RP2_presentation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Logic06183/RP2_presentation/issues"
+  },
+  "homepage": "https://github.com/Logic06183/RP2_presentation#readme",
+  "description": "",
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
