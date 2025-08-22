@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Waves & Health in African Cities: Johannesburg vs Abidjan Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.5s ease-in-out;
+            background: white;
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide.prev {
+            transform: translateX(-100%);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            color: #34495e;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.8rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .author-info {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+        }
+
+        .author-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-affiliation {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Figure Containers */
+        .figure-container {
+            width: 100%;
+            margin: 1rem 0;
+            text-align: center;
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .figure-container.full {
+            height: 80vh;
+        }
+
+        .figure-container.large {
+            height: 75vh;
+        }
+
+        .figure-container.medium {
+            height: 65vh;
+        }
+
+        .figure-container.small {
+            height: 55vh;
+        }
+
+        .figure-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .figure-caption {
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 1rem;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* Stats Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Key Points */
+        .key-points {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .key-points h3 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .key-points ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-points li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .key-points li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .nav-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: rgba(44, 62, 80, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            z-index: 1000;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s ease;
+            z-index: 1000;
+        }
+
+        /* Comparison Grid */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .city-card {
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .johannesburg-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+
+        .abidjan-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            height: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px 30px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-grid, .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="progress-bar" id="progressBar"></div>
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1>Heat Waves & Health in African Cities</h1>
+            <div class="subtitle">Comparative Analysis of Climate-Health Vulnerabilities in Johannesburg & Abidjan</div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Major African Cities</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">23</div>
+                    <div class="stat-label">Research Studies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20,962</div>
+                    <div class="stat-label">Participants</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Years of Data</div>
+                </div>
+            </div>
+
+            <div class="author-info">
+                <div class="author-name">Prof. Guéladio Cissé</div>
+                <div class="author-affiliation">Centre Suisse de Recherches Scientifiques (CSRS), Côte d'Ivoire</div>
+                <div class="author-affiliation">Swiss Tropical and Public Health Institute (Swiss TPH)</div>
+                <div style="margin-top: 1rem; font-size: 0.9rem; color: #777;">
+                    Research: Craig Parker, PhD Candidate | University of the Witwatersrand<br>
+                    HE2AT Center | NIH Common Fund Award U54 TW 012083
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Research Portfolio -->
+        <div class="slide">
+            <h2>Research Portfolio & Evidence Base</h2>
+            <div class="figure-container large">
+                <img src="presentation_assets/02_Research_Portfolio_23_Studies_20962_Participants.svg" alt="Research Portfolio Analysis">
+                <div class="figure-caption">
+                    Comprehensive research portfolio spanning 2002-2020 with 23 harmonized studies. Johannesburg leads with 15 studies 
+                    (11,800 participants) while Abidjan contributes 8 studies (9,162 participants). Study categories include clinical 
+                    trials, cohort studies, and community programs providing robust evidence for heat-health analysis.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Comprehensive Climate Comparison -->
+        <div class="slide">
+            <h2>Multi-Dimensional Climate Comparison</h2>
+            <div class="figure-container full">
+                <img src="presentation_assets/images/02_comprehensive_city_comparison.png" alt="Comprehensive City Climate Comparison">
+                <div class="figure-caption">
+                    Four-year climate analysis (2020-2024) revealing distinct patterns: Johannesburg shows strong seasonal variation 
+                    (5-25°C) with dry heat extremes, while Abidjan maintains consistently high temperatures (22-32°C) with humidity 
+                    stress. Heat index categories demonstrate Abidjan's year-round "Caution" conditions versus Johannesburg's seasonal pattern.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Urban Heat Island Effects -->
+        <div class="slide">
+            <h2>Urban Heat Island Amplification</h2>
+            <div class="figure-container large">
+                <img src="presentation_assets/svg_clean/urban_heat_islands_clean.svg" alt="Urban Heat Island Effects">
+                <div class="figure-caption">
+                    Critical urban heat island effects showing temperature anomalies from city centers. Johannesburg exhibits 
+                    moderate UHI effect (+3.8°C peak) while Abidjan shows severe amplification (+6.4°C peak). These additional 
+                    heat burdens significantly increase health risks for urban populations, particularly in densely populated areas.
+                </div>
+            </div>
+            
+            <div class="key-points">
+                <h3>Key Urban Heat Findings</h3>
+                <ul>
+                    <li>Johannesburg: Moderate UHI effect concentrated in northern industrial areas</li>
+                    <li>Abidjan: Severe coastal tropical UHI extending 10km from city center</li>
+                    <li>68% higher UHI intensity in Abidjan requiring different adaptation strategies</li>
+                    <li>Both cities show asymmetric patterns influenced by prevailing winds and topography</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5: Heat Stress Analysis -->
+        <div class="slide">
+            <h2>Heat Stress & Health Risk Analysis</h2>
+            <div class="figure-container large">
+                <img src="presentation_assets/svg_clean/heat_stress_analysis_clean.svg" alt="Heat Stress Analysis">
+                <div class="figure-caption">
+                    Heat index time series and temperature-humidity relationships demonstrate contrasting stress patterns. 
+                    Abidjan experiences 550 "Caution" days (2020-2023) versus Johannesburg's 50 days. The temperature-humidity 
+                    scatter plot reveals Abidjan's dangerous combination of high temperature AND high humidity, while 
+                    Johannesburg shows dry heat conditions with lower humidity stress.
+                </div>
+            </div>
+            
+            <div class="comparison-grid">
+                <div class="city-card johannesburg-card">
+                    <h3>Johannesburg Heat Profile</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>50 caution days (2020-2023)</li>
+                        <li>Dry heat extremes (>35°C)</li>
+                        <li>Low humidity (20-40%)</li>
+                        <li>Peak risk: December-February</li>
+                    </ul>
+                </div>
+                <div class="city-card abidjan-card">
+                    <h3>Abidjan Heat Profile</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>550 caution days (2020-2023)</li>
+                        <li>Humid heat stress (>32°C)</li>
+                        <li>High humidity (70-95%)</li>
+                        <li>Year-round exposure risk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: LISA Spatial Clustering -->
+        <div class="slide">
+            <h2>Spatial Heat Vulnerability Clustering</h2>
+            <div class="two-column">
+                <div>
+                    <div class="figure-container medium">
+                        <img src="presentation_assets/svg_clean/lisa_clusters_clean.svg" alt="LISA Clustering Analysis">
+                        <div class="figure-caption">
+                            Local Indicators of Spatial Association (LISA) clusters for heat vulnerability in Johannesburg. 
+                            Significant High-High clusters (red) identify vulnerable hotspots in southern townships. 
+                            Low-Low clusters (blue) show affluent northern areas with lower vulnerability. 
+                            Global Moran's I p-value <2e-16 confirms strong spatial autocorrelation.
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="figure-container medium">
+                        <img src="presentation_assets/images/image copy.png" alt="Heat Vulnerability Index">
+                        <div class="figure-caption">
+                            Heat vulnerability index identifying top 10 most vulnerable wards encompassing 890,000 residents 
+                            (18% of metropolitan population). This spatial targeting enables efficient resource allocation 
+                            for maximum public health impact.
+                        </div>
+                    </div>
+                    
+                    <div class="key-points" style="margin-top: 1rem;">
+                        <h3>Spatial Analysis Insights</h3>
+                        <ul>
+                            <li>Clear socio-economic gradient in heat vulnerability</li>
+                            <li>Clustering effects amplify risk in townships</li>
+                            <li>Targeted interventions can reach 890K residents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Climate Data Validation -->
+        <div class="slide">
+            <h2>Climate Data Validation & Quality</h2>
+            <div class="two-column">
+                <div>
+                    <div class="figure-container medium">
+                        <img src="presentation_assets/images/validation_climate_correlation_matrix.png" alt="Climate Variables Correlation">
+                        <div class="figure-caption">
+                            ERA5 climate variables correlation matrix demonstrating high internal consistency. 
+                            Strong correlations between temperature metrics (0.94-0.97) validate data quality. 
+                            MODIS LST shows moderate correlation with ERA5 temperature, confirming 
+                            ground-truth validation across multiple data sources.
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="figure-container medium">
+                        <img src="presentation_assets/images/validation_temperature_distributions.png" alt="Temperature Distributions">
+                        <div class="figure-caption">
+                            Temperature distribution validation across 1-day, 7-day, and 30-day means showing 
+                            consistent patterns. Normal distributions confirm data quality and enable robust 
+                            statistical modeling. Clear separation between Johannesburg (12-26°C) and 
+                            Abidjan (18-24°C) temperature ranges validates comparative analysis framework.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-points">
+                <h3>Data Quality Assurance</h3>
+                <ul>
+                    <li><strong>Multiple Sources:</strong> ERA5 reanalysis validated with MODIS satellite data</li>
+                    <li><strong>Temporal Consistency:</strong> Strong correlations across 1-day to 30-day averages</li>
+                    <li><strong>Spatial Validation:</strong> Ground truth matching with local weather stations</li>
+                    <li><strong>Statistical Robustness:</strong> Normal distributions enable advanced modeling</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 8: Key Findings & Recommendations -->
+        <div class="slide">
+            <h2>Key Findings & Policy Recommendations</h2>
+            <div class="figure-container large">
+                <img src="presentation_assets/images/05_quick_reference_card.png" alt="Quick Reference Summary">
+            </div>
+            
+            <div class="key-points">
+                <h3>Evidence-Based Interventions</h3>
+                <ul>
+                    <li><strong>Johannesburg:</strong> Implement dry heat early warning systems (>35°C threshold)</li>
+                    <li><strong>Abidjan:</strong> Priority on humidity-heat monitoring and cooling infrastructure</li>
+                    <li><strong>Both Cities:</strong> Strengthen healthcare capacity during peak seasons</li>
+                    <li><strong>Investment:</strong> $290M combined annual economic impact requires urgent action</li>
+                    <li><strong>Future Risk:</strong> Plan for 2-3x increase in extreme heat days by 2050</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #3498db; margin-bottom: 1rem;">Next Steps</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Development of predictive early warning systems | Real-time heat-health surveillance | 
+                    Spatial targeting of interventions | Cross-city learning platform
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Thank You -->
+        <div class="slide">
+            <h1 style="margin-bottom: 3rem;">Thank You</h1>
+            <h2 style="color: #7f8c8d; border: none;">Questions & Discussion</h2>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2rem; border-radius: 15px; max-width: 600px; margin: 0 auto;">
+                    <div class="author-name">Prof. Guéladio Cissé</div>
+                    <div class="author-affiliation">Senior Scientist & Technical Advisor</div>
+                    <div class="author-affiliation">CSRS, Côte d'Ivoire | Swiss TPH</div>
+                    
+                    <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #bdc3c7;">
+                        <p style="font-size: 1rem; color: #555;">
+                            <strong>Research Implementation:</strong><br>
+                            Craig Parker, PhD Candidate<br>
+                            University of the Witwatersrand<br>
+                            HE2AT Center Research Project 2
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center; font-size: 0.9rem; color: #95a5a6;">
+                <em>Plenary Session: Heat Waves, Air Pollution & Health in Africa<br>
+                DSI-Africa Conference 2025 | NIH Common Fund Award U54 TW 012083</em>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-counter">
+        <span id="currentSlide">1</span> / <span id="totalSlides">9</span>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev');
+                if (index === currentSlideIndex) {
+                    slide.classList.add('active');
+                } else if (index < currentSlideIndex) {
+                    slide.classList.add('prev');
+                }
+            });
+            
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+            const progress = ((currentSlideIndex + 1) / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            document.getElementById('prevBtn').disabled = currentSlideIndex === 0;
+            document.getElementById('nextBtn').disabled = currentSlideIndex === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            const newIndex = currentSlideIndex + direction;
+            if (newIndex >= 0 && newIndex < totalSlides) {
+                currentSlideIndex = newIndex;
+                updateSlide();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                event.preventDefault();
+                changeSlide(1);
+            } else if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                changeSlide(-1);
+            } else if (event.key === 'Home') {
+                event.preventDefault();
+                currentSlideIndex = 0;
+                updateSlide();
+            } else if (event.key === 'End') {
+                event.preventDefault();
+                currentSlideIndex = totalSlides - 1;
+                updateSlide();
+            } else if (event.key === 'Escape') {
+                event.preventDefault();
+                if (document.fullscreenElement) {
+                    document.exitFullscreen();
+                }
+            } else if (event.key === 'f' || event.key === 'F') {
+                event.preventDefault();
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            }
+        });
+
+        updateSlide();
+    </script>
+</body>
+</html>
