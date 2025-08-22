@@ -1,0 +1,24 @@
+study_id,study_name,city,country,latitude,longitude,sample_size,study_period,study_design,climate_zone,altitude_m,rainy_season,dry_season,peak_heat_months,study_category,heat_exposure_risk,urban_heat_island
+JHB_ACTG_015,ACTG 5208 Nevirapine Trial,Johannesburg,South Africa,-26.2041,28.0473,177,2005-2008,RCT,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,ACTG,High,Moderate
+JHB_ACTG_016,ACTG 5221 HIV/TB Coinfection,Johannesburg,South Africa,-26.2041,28.0473,78,2007-2008,RCT,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,ACTG,High,Moderate
+JHB_ACTG_021,ACTG 5199 Neurological Study,Johannesburg,South Africa,-26.2041,28.0473,671,2006-2010,Neurological Study,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,ACTG,High,Moderate
+JHB_Aurum_009,Thol'impilo HIV Linkage,Johannesburg,South Africa,-26.2041,28.0473,2930,2013-2017,Program Evaluation,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Community,High,Moderate
+JHB_DPHRU_013,Birth to Twenty Plus Cohort,Johannesburg,South Africa,-26.2041,28.0473,247,2011-2013,Longitudinal Cohort,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Cohort,High,Moderate
+JHB_DPHRU_053,MASC Study,Johannesburg,South Africa,-26.2041,28.0473,1013,2017,Cross-sectional,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Cohort,High,Moderate
+JHB_EZIN_025,EZIN025 COVID Treatment,Johannesburg,South Africa,-26.2041,28.0473,192,2020,COVID Study,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,COVID-19,High,Moderate
+JHB_EZIN_002,ADVANCE HIV Trial,Johannesburg,South Africa,-26.2041,28.0473,1053,2017-2018,RCT,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Clinical Trial,High,Moderate
+JHB_JHSPH_005,TB Prevention Trial,Johannesburg,South Africa,-26.2041,28.0473,524,Multi-year,Prevention Trial,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Academic,High,Moderate
+JHB_SCHARP_004,HPTN 075 MSM Prevention,Johannesburg,South Africa,-26.2041,28.0473,401,2015-2017,Prevention RCT,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Prevention,High,Moderate
+JHB_SCHARP_006,HPTN 082 PrEP Young Women,Johannesburg,South Africa,-26.2041,28.0473,451,2016-2018,Prevention RCT,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Prevention,High,Moderate
+JHB_VIDA_007,ChAdOx1 COVID Vaccine,Johannesburg,South Africa,-26.2041,28.0473,2129,2020,Vaccine Trial,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,COVID-19,High,Moderate
+JHB_VIDA_008,COVID Healthcare Worker Study,Johannesburg,South Africa,-26.2041,28.0473,557,Apr-Sep 2020,COVID Cohort,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,COVID-19,High,Moderate
+JHB_WRHI_001,WRHI001 Stavudine vs Tenofovir,Johannesburg,South Africa,-26.2041,28.0473,1072,Multi-year,HIV Trial,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Clinical Trial,High,Moderate
+JHB_WRHI_003,WRHI003 Darunavir vs Lopinavir,Johannesburg,South Africa,-26.2041,28.0473,305,2016-2017,RCT,Subtropical Highland,1753,Oct-Mar,Apr-Sep,Dec-Feb,Clinical Trial,High,Moderate
+PACCI_Temprano,ANRS 12136 Temprano Trial,Abidjan,Côte d'Ivoire,5.36,-4.0083,2056,2008-2015,RCT,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,Clinical Trial,Very High,Severe
+PACCI_Trivacan,Trivacan Study,Abidjan,Côte d'Ivoire,5.36,-4.0083,672,2009-2012,Cohort Study,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,Clinical Trial,Very High,Severe
+PACCI_Virage,VIRAGE Cohort,Abidjan,Côte d'Ivoire,5.36,-4.0083,501,2010-2015,Cohort Study,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,Cohort,Very High,Severe
+PACCI_Ditrame_Plus,Ditrame-Plus MTCT,Abidjan,Côte d'Ivoire,5.36,-4.0083,1200,2001-2005,MTCT Trial,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,MTCT,Very High,Severe
+PACCI_MTCT_Plus,MTCT-Plus Program,Abidjan,Côte d'Ivoire,5.36,-4.0083,890,2003-2008,MTCT Program,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,MTCT,Very High,Severe
+PACCI_Primo_CI,Primo-CI Cohort,Abidjan,Côte d'Ivoire,5.36,-4.0083,1534,2004-2010,Cohort Study,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,Cohort,Very High,Severe
+PACCI_Statis,ANRS 12289 STATIS Trial,Abidjan,Côte d'Ivoire,5.36,-4.0083,1571,2013-2017,RCT,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,Clinical Trial,Very High,Severe
+PACCI_Voltart,ANRS 12186 VOLTART,Abidjan,Côte d'Ivoire,5.36,-4.0083,738,2012-2016,Cohort Study,Tropical Savanna,76,May-Oct,Nov-Apr,Feb-Apr,Clinical Trial,Very High,Severe

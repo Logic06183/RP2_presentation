@@ -1,0 +1,23 @@
+CORRECTED JOHANNESBURG-ABIDJAN HEAT-HEALTH ANALYSIS
+============================================================
+
+CORRECTED SUMMARY (Real Harmonized Data)
+---------------------------------------------
+Total Studies: 23
+Total Participants: 20,962
+
+JOHANNESBURG:
+  Studies: 15
+  Participants: 11,800 (56.3%)
+  Climate: Subtropical Highland (1,753m)
+  Heat Risk: High
+  Peak Heat: Dec-Feb (Summer)
+
+ABIDJAN:
+  Studies: 8
+  Participants: 9,162 (43.7%)
+  Climate: Tropical Savanna (76m)
+  Heat Risk: Very High
+  Peak Heat: Feb-Apr (Dry season)
+
+RESEARCH RATIO: Johannesburg has 1.3x more participants than Abidjan
