@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial Heat-Health Vulnerability Analysis: African Urban Contexts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.4s ease-in-out;
+            background: white;
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide.prev {
+            transform: translateX(-100%);
+        }
+
+        /* Typography - Scientific Style */
+        h1 {
+            font-size: 2.8rem;
+            color: #1a472a;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            border-bottom: 3px solid #e8f5e8;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #1a472a;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .author-info {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+
+        .author-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a472a;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-affiliation {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Scientific Figure Containers */
+        .figure-container {
+            width: 100%;
+            margin: 1.5rem 0;
+            text-align: center;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .figure-container img {
+            max-width: 100%;
+            max-height: 65vh;
+            object-fit: contain;
+            background: white;
+            border-radius: 4px;
+        }
+
+        .figure-caption {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 1rem;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Key Findings Boxes */
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .finding-box {
+            background: #f8f9fa;
+            border-left: 4px solid #1a472a;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .finding-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a472a;
+            margin-bottom: 0.8rem;
+        }
+
+        .finding-content {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        /* Scientific Lists */
+        .scientific-list {
+            list-style: none;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 1rem 0;
+        }
+
+        .scientific-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .scientific-list li:before {
+            content: "•";
+            color: #1a472a;
+            font-weight: bold;
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 0.8rem;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: #1a472a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .nav-btn:hover {
+            background: #2d5a3d;
+        }
+
+        .nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-counter {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 71, 42, 0.9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 1000;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: #1a472a;
+            transition: width 0.4s ease;
+            z-index: 1000;
+        }
+
+        /* Scientific Stats Grid */
+        .stats-scientific {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-scientific {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a472a;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        /* Methods Box */
+        .methods-box {
+            background: #f1f8e9;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .methods-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a472a;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 20px 30px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .stats-scientific {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="progress-bar" id="progressBar"></div>
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <h1>Spatial Heat-Health Vulnerability Analysis in African Urban Contexts</h1>
+            <div class="subtitle">Advanced Geospatial Methods for Climate-Health Risk Assessment</div>
+            
+            <div class="stats-scientific">
+                <div class="stat-scientific">
+                    <div class="stat-number">23</div>
+                    <div class="stat-label">Harmonized Studies</div>
+                </div>
+                <div class="stat-scientific">
+                    <div class="stat-number">20,962</div>
+                    <div class="stat-label">Research Participants</div>
+                </div>
+                <div class="stat-scientific">
+                    <div class="stat-number">22</div>
+                    <div class="stat-label">Years of Analysis</div>
+                </div>
+                <div class="stat-scientific">
+                    <div class="stat-number">135</div>
+                    <div class="stat-label">Johannesburg Wards</div>
+                </div>
+            </div>
+
+            <div class="author-info">
+                <div class="author-name">Prof. Guéladio Cissé</div>
+                <div class="author-affiliation">Senior Scientist & Technical Advisor</div>
+                <div class="author-affiliation">Centre Suisse de Recherches Scientifiques (CSRS), Côte d'Ivoire</div>
+                <div class="author-affiliation">Swiss Tropical and Public Health Institute (Swiss TPH)</div>
+                <div style="margin-top: 1rem; font-size: 0.9rem; color: #777;">
+                    Research Implementation: Craig Parker, PhD Candidate | University of the Witwatersrand<br>
+                    HE2AT Center | NIH Common Fund Award U54 TW 012083
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Spatial Principal Components Analysis -->
+        <div class="slide">
+            <h2>Spatial Principal Components Analysis</h2>
+            <div class="figure-container">
+                <img src="image.png" alt="Spatial Distribution of Principal Components">
+                <div class="figure-caption">
+                    <strong>Figure 1.</strong> Spatial distribution of PC1 (Environmental Exposure Factors) and PC2 (Health Vulnerability Factors) 
+                    across Johannesburg metropolitan area. PC1 explains environmental heat exposure gradients, while PC2 captures 
+                    socio-demographic vulnerability patterns. Blue indicates higher loadings, red indicates lower loadings.
+                </div>
+            </div>
+            
+            <div class="findings-grid">
+                <div class="finding-box">
+                    <div class="finding-title">Environmental Exposure (PC1)</div>
+                    <div class="finding-content">Northern regions show elevated environmental exposure scores, correlating with land surface temperature and urban heat island intensity.</div>
+                </div>
+                <div class="finding-box">
+                    <div class="finding-title">Health Vulnerability (PC2)</div>
+                    <div class="finding-content">Southern townships demonstrate higher vulnerability scores, reflecting socioeconomic constraints and limited adaptive capacity.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Heat Vulnerability Mapping -->
+        <div class="slide">
+            <h2>Geographically Weighted Heat Vulnerability Index</h2>
+            <div class="figure-container">
+                <img src="image copy.png" alt="Heat Vulnerability Index and Top 10 Vulnerable Wards">
+                <div class="figure-caption">
+                    <strong>Figure 2.</strong> Spatially explicit heat vulnerability index (left) and identification of top 10 most 
+                    heat-vulnerable wards (right) in Johannesburg. Vulnerability index integrates exposure, sensitivity, and 
+                    adaptive capacity components using geographically weighted principal component analysis.
+                </div>
+            </div>
+
+            <div class="methods-box">
+                <div class="methods-title">Methodological Innovation</div>
+                <ul class="scientific-list">
+                    <li>Geographically Weighted Principal Component Analysis (GW-PCA) for spatial non-stationarity</li>
+                    <li>Multi-domain vulnerability assessment incorporating climate, health, and socioeconomic indicators</li>
+                    <li>Ward-level analysis enabling targeted intervention strategies</li>
+                    <li>Validation through Local Indicators of Spatial Association (LISA) clustering</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4: LISA Spatial Clustering -->
+        <div class="slide">
+            <h2>Local Indicators of Spatial Association (LISA)</h2>
+            <div class="figure-container">
+                <img src="image copy 2.png" alt="LISA Clusters for Heat Vulnerability">
+                <div class="figure-caption">
+                    <strong>Figure 3.</strong> LISA cluster analysis revealing significant spatial autocorrelation in heat vulnerability 
+                    (Global Moran's I p-value: <2e-16). Red clusters indicate high-high vulnerability hotspots, blue clusters show 
+                    low-low vulnerability areas, with statistically significant spatial clustering at p < 0.05.
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Spatial Clustering Results</h3>
+                    <ul class="scientific-list">
+                        <li><strong>High-High Clusters:</strong> Concentrated vulnerability hotspots in southern townships</li>
+                        <li><strong>Low-Low Clusters:</strong> Northern suburban areas with reduced vulnerability</li>
+                        <li><strong>Spatial Autocorrelation:</strong> Highly significant (p < 2e-16) indicating robust clustering</li>
+                        <li><strong>Policy Implications:</strong> Clear geographic targeting for interventions</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Statistical Significance</h3>
+                    <div class="finding-box">
+                        <div class="finding-title">Global Moran's I</div>
+                        <div class="finding-content">p-value < 2e-16 confirms statistically significant spatial clustering, validating the geographically explicit approach to vulnerability assessment.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Comparative Research Portfolio -->
+        <div class="slide">
+            <h2>Multi-City Research Portfolio Analysis</h2>
+            <div class="figure-container">
+                <img src="image copy 3.png" alt="Corrected Heat-Health Research Portfolio">
+                <div class="figure-caption">
+                    <strong>Figure 4.</strong> Comprehensive analysis of heat-health research portfolio across Johannesburg and Abidjan. 
+                    Panel shows participant distribution, study categories, temporal coverage, and research impact summary 
+                    demonstrating unique cross-climate zone comparative advantage.
+                </div>
+            </div>
+
+            <div class="findings-grid">
+                <div class="finding-box">
+                    <div class="finding-title">Johannesburg (Subtropical Highland)</div>
+                    <div class="finding-content">11,800 participants across 15 studies. Altitude: 1,753m. High heat exposure risk with moderate UHI. Peak exposure: Dec-Feb (Summer).</div>
+                </div>
+                <div class="finding-box">
+                    <div class="finding-title">Abidjan (Tropical Savanna)</div>
+                    <div class="finding-content">9,162 participants across 8 studies. Altitude: 76m. Very high heat exposure risk with severe UHI. Peak exposure: Feb-Apr (Dry season).</div>
+                </div>
+                <div class="finding-box">
+                    <div class="finding-title">Research Advantage</div>
+                    <div class="finding-content">Combined dataset provides unique climate zone comparison for heat-health analysis with overlapping vulnerable populations and rich clinical biomarker data.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Demographic & Clinical Analysis -->
+        <div class="slide">
+            <h2>Population Demographics & Clinical Biomarker Availability</h2>
+            <div class="figure-container">
+                <img src="image copy 4.png" alt="Heat-Health Demographics Analysis">
+                <div class="figure-caption">
+                    <strong>Figure 5.</strong> Demographic characteristics and clinical data availability across study populations. 
+                    Shows age distribution, gender balance, research timeline, vulnerability risk factors, and biomarker coverage 
+                    enabling comprehensive heat-health epidemiological analysis.
+                </div>
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <h3>Population Characteristics</h3>
+                    <ul class="scientific-list">
+                        <li><strong>Age Distribution:</strong> Heat-vulnerable populations (65+) well represented</li>
+                        <li><strong>Gender Balance:</strong> 52-59% female participation ensuring representative samples</li>
+                        <li><strong>Clinical Coverage:</strong> 85-90% biomarker availability across key indicators</li>
+                        <li><strong>Temporal Span:</strong> 2002-2020 enabling longitudinal climate-health analysis</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Research Capacity Summary</h3>
+                    <div class="methods-box">
+                        <div class="methods-title">Analytical Potential</div>
+                        <div style="font-size: 1rem; line-height: 1.6;">
+                            Two contrasting climate zones with overlapping vulnerable populations provide 
+                            ideal natural experiment for heat-health vulnerability analysis. Rich clinical 
+                            biomarker data enables mechanistic understanding of heat exposure pathways.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Scientific Implications -->
+        <div class="slide">
+            <h2>Scientific Contributions & Future Directions</h2>
+            
+            <div class="findings-grid">
+                <div class="finding-box">
+                    <div class="finding-title">Methodological Innovation</div>
+                    <div class="finding-content">First application of geographically weighted approaches to heat-health vulnerability in African contexts, enabling spatial non-stationarity analysis.</div>
+                </div>
+                <div class="finding-box">
+                    <div class="finding-title">Cross-Climate Validation</div>
+                    <div class="finding-content">Comparative analysis across subtropical highland and tropical savanna climates provides robust framework for African urban contexts.</div>
+                </div>
+                <div class="finding-box">
+                    <div class="finding-title">Policy Applications</div>
+                    <div class="finding-content">Spatially explicit vulnerability maps enable evidence-based targeting of climate adaptation interventions and health system preparedness.</div>
+                </div>
+            </div>
+
+            <div class="methods-box">
+                <div class="methods-title">Next Steps: Predictive Modeling Framework</div>
+                <ul class="scientific-list">
+                    <li><strong>Ensemble Machine Learning:</strong> Development of 24-72 hour heat-health risk forecasting</li>
+                    <li><strong>Causal Inference:</strong> Advanced explanatory modeling using SHAP/LIME interpretation</li>
+                    <li><strong>Scalability Assessment:</strong> Framework validation across additional African urban centers</li>
+                    <li><strong>Early Warning Systems:</strong> Integration with public health surveillance infrastructure</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                <strong>Timeline:</strong> 36-month PhD research program with quarterly milestones<br>
+                <em>Current Status: Vulnerability mapping phase completion (Month 18 of 36)</em>
+            </div>
+        </div>
+
+        <!-- Slide 8: Thank You -->
+        <div class="slide">
+            <h1 style="color: #1a472a; margin-bottom: 3rem;">Thank You</h1>
+            <h2 style="color: #555; margin-bottom: 3rem;">Questions & Discussion</h2>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <div style="background: #f8f9fa; border: 1px solid #e9ecef; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+                    <div class="author-name" style="margin-bottom: 1rem;">Prof. Guéladio Cissé</div>
+                    <div class="author-affiliation">Senior Scientist & Technical Advisor</div>
+                    <div class="author-affiliation">Centre Suisse de Recherches Scientifiques (CSRS)</div>
+                    <div class="author-affiliation">Swiss Tropical and Public Health Institute</div>
+                    
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #ddd;">
+                        <div style="font-size: 1rem; color: #666;">
+                            <strong>Research Implementation:</strong><br>
+                            Craig Parker, PhD Candidate<br>
+                            University of the Witwatersrand School of Public Health<br>
+                            HE2AT Center Research Project 2
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center; font-size: 0.9rem; color: #777;">
+                <em>Plenary Session: Heat Waves, Air Pollution & Health in Africa<br>
+                DSI-Africa Conference 2025 | NIH Common Fund Award U54 TW 012083</em>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-counter">
+        <span id="currentSlide">1</span> / <span id="totalSlides">8</span>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        // Initialize slide counter
+        document.getElementById('totalSlides').textContent = totalSlides;
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev');
+                if (index === currentSlideIndex) {
+                    slide.classList.add('active');
+                } else if (index < currentSlideIndex) {
+                    slide.classList.add('prev');
+                }
+            });
+            
+            // Update slide counter
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+            
+            // Update progress bar
+            const progress = ((currentSlideIndex + 1) / totalSlides) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = currentSlideIndex === 0;
+            document.getElementById('nextBtn').disabled = currentSlideIndex === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            const newIndex = currentSlideIndex + direction;
+            if (newIndex >= 0 && newIndex < totalSlides) {
+                currentSlideIndex = newIndex;
+                updateSlide();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                event.preventDefault();
+                changeSlide(1);
+            } else if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                changeSlide(-1);
+            } else if (event.key === 'Home') {
+                event.preventDefault();
+                currentSlideIndex = 0;
+                updateSlide();
+            } else if (event.key === 'End') {
+                event.preventDefault();
+                currentSlideIndex = totalSlides - 1;
+                updateSlide();
+            }
+        });
+
+        // Initialize presentation
+        updateSlide();
+    </script>
+</body>
+</html>
