@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Locations in African Context</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            margin: 0;
+            padding: 20px;
+            color: #333333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .header {
+            background: #ffffff;
+            padding: 24px 30px;
+            border-bottom: 3px solid #E3120B;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333333;
+            letter-spacing: -0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            color: #758D99;
+            font-weight: 400;
+        }
+        
+        .map-container {
+            position: relative;
+            height: 650px;
+            background: #ffffff;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .stats-panel {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            z-index: 1000;
+            font-size: 14px;
+            min-width: 180px;
+        }
+        
+        .stats-panel h3 {
+            color: #333333;
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        
+        .stat-label {
+            color: #758D99;
+            font-size: 13px;
+        }
+        
+        .stat-value {
+            color: #333333;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .climate-legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            z-index: 1000;
+            font-size: 13px;
+        }
+        
+        .climate-legend h3 {
+            color: #333333;
+            margin-bottom: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        
+        .legend-color {
+            width: 18px;
+            height: 12px;
+            margin-right: 8px;
+            border: 1px solid #cccccc;
+        }
+        
+        .legend-label {
+            color: #333333;
+            font-size: 12px;
+        }
+        
+        .leaflet-popup-content-wrapper {
+            border-radius: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .leaflet-popup-content {
+            margin: 12px 16px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        
+        .popup-location {
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .popup-participants {
+            color: #E3120B;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .popup-label {
+            color: #758D99;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .popup-detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+        }
+        
+        .popup-detail-label {
+            color: #758D99;
+            font-size: 12px;
+        }
+        
+        .popup-detail-value {
+            color: #333333;
+            font-weight: 500;
+            font-size: 12px;
+        }
+        
+        .leaflet-control-zoom a {
+            border: 1px solid #e0e0e0;
+        }
+        
+        .leaflet-control-attribution {
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Study locations in African context</h1>
+            <div class="subtitle">Köppen-Geiger climate classification and participant distribution</div>
+        </div>
+        
+        <div class="map-container">
+            <div id="map"></div>
+            
+            <div class="stats-panel">
+                <h3>Study overview</h3>
+                <div class="stat-item">
+                    <span class="stat-label">Studies</span>
+                    <span class="stat-value">23</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Participants</span>
+                    <span class="stat-value">20,962</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Countries</span>
+                    <span class="stat-value">2</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Climate zones</span>
+                    <span class="stat-value">3</span>
+                </div>
+            </div>
+            
+            <div class="climate-legend">
+                <h3>Köppen-Geiger climate</h3>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #795548;"></div>
+                    <span class="legend-label">BSk Cold semi-arid</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4CAF50;"></div>
+                    <span class="legend-label">Aw Tropical savanna</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #009688;"></div>
+                    <span class="legend-label">Am Tropical monsoon</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #2196F3;"></div>
+                    <span class="legend-label">Cwa Humid subtropical</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #FFC107;"></div>
+                    <span class="legend-label">BWh Hot desert</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize the map with minimal controls
+        const map = L.map('map', {
+            center: [-2, 17],
+            zoom: 3,
+            zoomControl: false,
+            attributionControl: true
+        });
+
+        // Clean, minimal base layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+            attribution: '© OpenStreetMap contributors © CARTO',
+            subdomains: 'abcd',
+            maxZoom: 8
+        }).addTo(map);
+
+        // Load accurate Köppen-Geiger climate data for Africa
+        fetch('./presentation_assets/images/koppen_africa_with_labels.geojson')
+            .then(response => response.json())
+            .then(data => {
+                // Define color mapping for Köppen climate zones
+                const climateColors = {
+                    'Af': '#006837',   // Tropical rainforest - dark green
+                    'Am': '#009688',   // Tropical monsoon - teal
+                    'Aw': '#4CAF50',   // Tropical savanna - green
+                    'As': '#8BC34A',   // Tropical dry savanna - light green
+                    'BWh': '#FFC107',  // Hot desert - yellow
+                    'BWk': '#FF9800',  // Cold desert - orange
+                    'BSh': '#FF5722',  // Hot semi-arid - red-orange
+                    'BSk': '#795548',  // Cold semi-arid - brown
+                    'Csa': '#9C27B0',  // Mediterranean hot - purple
+                    'Csb': '#673AB7',  // Mediterranean warm - deep purple
+                    'Cwa': '#2196F3',  // Humid subtropical - blue
+                    'Cwb': '#3F51B5',  // Subtropical highland - indigo
+                    'Cfa': '#00BCD4',  // Humid subtropical - cyan
+                    'Cfb': '#607D8B'   // Oceanic - blue-gray
+                };
+
+                // Add climate zones to map
+                L.geoJSON(data, {
+                    style: function(feature) {
+                        const climate = feature.properties.koppen_code;
+                        return {
+                            fillColor: climateColors[climate] || '#CCCCCC',
+                            weight: 0.3,
+                            opacity: 0.6,
+                            color: '#FFFFFF',
+                            fillOpacity: 0.35
+                        };
+                    },
+                    onEachFeature: function(feature, layer) {
+                        layer.bindPopup(feature.properties.koppen_label, {
+                            className: 'climate-popup'
+                        });
+                    }
+                }).addTo(map);
+            })
+            .catch(error => {
+                console.log('Loading fallback climate zones...');
+                // Fallback simplified zones if GeoJSON fails to load
+                const fallbackZones = [
+                    {
+                        name: "BWh (Hot desert)",
+                        color: "#FFC107",
+                        bounds: [[32, -17], [32, 37], [12, 37], [18, 25], [20, 15], [15, 12], [12, -17]]
+                    },
+                    {
+                        name: "BSk (Cold semi-arid)",
+                        color: "#795548", 
+                        bounds: [[18, -20], [18, 15], [20, 35], [12, 37], [12, 15], [15, 12], [20, 15], [15, -8], [12, -17]]
+                    },
+                    {
+                        name: "Aw (Tropical savanna)",
+                        color: "#4CAF50",
+                        bounds: [[15, -18], [15, -8], [20, 15], [15, 12], [12, 15], [8, 20], [5, 15], [8, 8], [0, 8], [0, -18]]
+                    }
+                ];
+                
+                fallbackZones.forEach(zone => {
+                    L.polygon([zone.bounds], {
+                        color: zone.color,
+                        fillColor: zone.color,
+                        fillOpacity: 0.25,
+                        weight: 0.5,
+                        opacity: 0.8
+                    }).addTo(map).bindPopup(zone.name);
+                });
+            });
+
+        // Study locations with simplified data
+        const studyLocations = [
+            {
+                name: "Abidjan",
+                country: "Côte d'Ivoire",
+                lat: 5.345317,
+                lng: -4.024429,
+                participants: 9162,
+                climate: "Am"
+            },
+            {
+                name: "Johannesburg", 
+                country: "South Africa",
+                lat: -26.195246,
+                lng: 28.034088,
+                participants: 11800,
+                climate: "Cwa"
+            }
+        ];
+
+        // Simple, clean circle markers
+        studyLocations.forEach(location => {
+            const radius = location.participants > 10000 ? 8 : 6;
+            
+            L.circleMarker([location.lat, location.lng], {
+                radius: radius,
+                fillColor: '#E3120B',
+                color: '#ffffff',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.9
+            }).addTo(map).bindPopup(`
+                <div class="popup-location">${location.name}</div>
+                <div class="popup-participants">${location.participants.toLocaleString()}</div>
+                <div class="popup-label">participants</div>
+                <div class="popup-detail">
+                    <span class="popup-detail-label">Climate:</span>
+                    <span class="popup-detail-value">${location.climate}</span>
+                </div>
+            `, {
+                closeButton: false,
+                className: 'minimal-popup'
+            });
+        });
+
+        // Add country labels as simple text overlays
+        const countryLabels = [
+            { name: "ALGERIA", lat: 28, lng: 3, size: "12px" },
+            { name: "LIBYA", lat: 27, lng: 17, size: "12px" },
+            { name: "EGYPT", lat: 26, lng: 30, size: "12px" },
+            { name: "MAURITANIA", lat: 20, lng: -10, size: "10px" },
+            { name: "MALI", lat: 17, lng: -4, size: "10px" },
+            { name: "NIGER", lat: 16, lng: 8, size: "10px" },
+            { name: "CHAD", lat: 15, lng: 19, size: "10px" },
+            { name: "SUDAN", lat: 15, lng: 30, size: "10px" },
+            { name: "NIGERIA", lat: 10, lng: 8, size: "11px" },
+            { name: "ETHIOPIA", lat: 9, lng: 40, size: "10px" },
+            { name: "CAMEROON", lat: 7, lng: 12, size: "10px" },
+            { name: "KENYA", lat: 1, lng: 38, size: "10px" },
+            { name: "DEM. REP. CONGO", lat: -4, lng: 22, size: "9px" },
+            { name: "TANZANIA", lat: -6, lng: 35, size: "10px" },
+            { name: "ANGOLA", lat: -12, lng: 18, size: "10px" },
+            { name: "ZAMBIA", lat: -13, lng: 28, size: "10px" },
+            { name: "NAMIBIA", lat: -22, lng: 17, size: "10px" },
+            { name: "BOTSWANA", lat: -22, lng: 24, size: "9px" },
+            { name: "SOUTH AFRICA", lat: -29, lng: 24, size: "11px" }
+        ];
+
+        countryLabels.forEach(label => {
+            L.marker([label.lat, label.lng], {
+                icon: L.divIcon({
+                    className: 'country-label',
+                    html: `<div style="
+                        font-family: Arial, sans-serif;
+                        font-size: ${label.size};
+                        font-weight: 500;
+                        color: #758D99;
+                        text-align: center;
+                        white-space: nowrap;
+                        text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+                        pointer-events: none;
+                    ">${label.name}</div>`,
+                    iconSize: [100, 20],
+                    iconAnchor: [50, 10]
+                })
+            }).addTo(map);
+        });
+
+        // Disable scroll wheel zoom for publication style
+        map.scrollWheelZoom.disable();
+        
+        // Set bounds to focus on Africa
+        map.fitBounds([[-35, -20], [40, 52]]);
+    </script>
+</body>
+</html>

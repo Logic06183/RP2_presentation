@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP2 Study Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            padding: 40px;
+            max-width: 1400px;
+            width: 100%;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.95em;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        th {
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 12px;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 12px;
+        }
+        
+        tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tbody tr:hover {
+            background-color: #f8f9ff;
+            transform: scale(1.01);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+        }
+        
+        td {
+            padding: 15px;
+            color: #2c3e50;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        tbody tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
+        
+        tbody tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }
+        
+        /* Location badges */
+        .location-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+        
+        .location-abidjan {
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
+            color: white;
+        }
+        
+        .location-johannesburg {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        
+        /* Study type badges */
+        .study-type {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.82em;
+            font-weight: 500;
+        }
+        
+        .type-clinical {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .type-cohort {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .type-community {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+        
+        .type-prevention {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .type-covid {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .type-mtct {
+            background: #fce4ec;
+            color: #880e4f;
+        }
+        
+        .type-actg {
+            background: #e0f2f1;
+            color: #00695c;
+        }
+        
+        .type-academic {
+            background: #ede7f6;
+            color: #4527a0;
+        }
+        
+        /* Sample size styling */
+        .sample-size {
+            font-weight: 600;
+            color: #34495e;
+        }
+        
+        /* Summary statistics */
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            min-width: 150px;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            tbody tr:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            table {
+                font-size: 0.85em;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RP2 Study Portfolio</h1>
+        <p class="subtitle">Comprehensive Overview of Research Studies</p>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Study ID</th>
+                        <th>Study Name</th>
+                        <th>Location</th>
+                        <th>Sample Size</th>
+                        <th>Study Type</th>
+                        <th>Study Period</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Abidjan Studies -->
+                    <tr>
+                        <td><strong>PACCI_Temprano</strong></td>
+                        <td>ANRS 12136 Temprano Trial</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">2,056</td>
+                        <td><span class="study-type type-clinical">Clinical Trial</span></td>
+                        <td>2008-2015</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACCI_Statis</strong></td>
+                        <td>ANRS 12289 STATIS Trial</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">1,571</td>
+                        <td><span class="study-type type-clinical">Clinical Trial</span></td>
+                        <td>2013-2017</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACCI_Primo_CI</strong></td>
+                        <td>Primo-CI Cohort</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">1,534</td>
+                        <td><span class="study-type type-cohort">Cohort</span></td>
+                        <td>2004-2010</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACCI_Ditrame_Plus</strong></td>
+                        <td>Ditrame-Plus MTCT</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">1,200</td>
+                        <td><span class="study-type type-mtct">MTCT</span></td>
+                        <td>2001-2005</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACCI_MTCT_Plus</strong></td>
+                        <td>MTCT-Plus Program</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">890</td>
+                        <td><span class="study-type type-mtct">MTCT</span></td>
+                        <td>2003-2008</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACCI_Voltart</strong></td>
+                        <td>ANRS 12186 VOLTART</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">738</td>
+                        <td><span class="study-type type-clinical">Clinical Trial</span></td>
+                        <td>2012-2016</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACCI_Trivacan</strong></td>
+                        <td>Trivacan Study</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">672</td>
+                        <td><span class="study-type type-clinical">Clinical Trial</span></td>
+                        <td>2009-2012</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PACCI_Virage</strong></td>
+                        <td>VIRAGE Cohort</td>
+                        <td><span class="location-badge location-abidjan">Abidjan</span></td>
+                        <td class="sample-size">501</td>
+                        <td><span class="study-type type-cohort">Cohort</span></td>
+                        <td>2010-2015</td>
+                    </tr>
+                    
+                    <!-- Johannesburg Studies -->
+                    <tr>
+                        <td><strong>JHB_Aurum_009</strong></td>
+                        <td>Thol'impilo HIV Linkage</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">2,930</td>
+                        <td><span class="study-type type-community">Community</span></td>
+                        <td>2013-2017</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_VIDA_007</strong></td>
+                        <td>ChAdOx1 COVID Vaccine</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">2,129</td>
+                        <td><span class="study-type type-covid">COVID-19</span></td>
+                        <td>2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_WRHI_001</strong></td>
+                        <td>WRHI001 Stavudine vs Tenofovir</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">1,072</td>
+                        <td><span class="study-type type-clinical">Clinical Trial</span></td>
+                        <td>Multi-year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_EZIN_002</strong></td>
+                        <td>ADVANCE HIV Trial</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">1,053</td>
+                        <td><span class="study-type type-clinical">Clinical Trial</span></td>
+                        <td>2017-2018</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_DPHRU_053</strong></td>
+                        <td>MASC Study</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">1,013</td>
+                        <td><span class="study-type type-cohort">Cohort</span></td>
+                        <td>2017</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_ACTG_021</strong></td>
+                        <td>ACTG 5199 Neurological Study</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">671</td>
+                        <td><span class="study-type type-actg">ACTG</span></td>
+                        <td>2006-2010</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_VIDA_008</strong></td>
+                        <td>COVID Healthcare Worker Study</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">557</td>
+                        <td><span class="study-type type-covid">COVID-19</span></td>
+                        <td>Apr-Sep 2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_JHSPH_005</strong></td>
+                        <td>TB Prevention Trial</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">524</td>
+                        <td><span class="study-type type-academic">Academic</span></td>
+                        <td>Multi-year</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_SCHARP_006</strong></td>
+                        <td>HPTN 082 PrEP Young Women</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">451</td>
+                        <td><span class="study-type type-prevention">Prevention</span></td>
+                        <td>2016-2018</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_SCHARP_004</strong></td>
+                        <td>HPTN 075 MSM Prevention</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">401</td>
+                        <td><span class="study-type type-prevention">Prevention</span></td>
+                        <td>2015-2017</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_WRHI_003</strong></td>
+                        <td>WRHI003 Darunavir vs Lopinavir</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">305</td>
+                        <td><span class="study-type type-clinical">Clinical Trial</span></td>
+                        <td>2016-2017</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_DPHRU_013</strong></td>
+                        <td>Birth to Twenty Plus Cohort</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">247</td>
+                        <td><span class="study-type type-cohort">Cohort</span></td>
+                        <td>2011-2013</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_EZIN_025</strong></td>
+                        <td>EZIN025 COVID Treatment</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">192</td>
+                        <td><span class="study-type type-covid">COVID-19</span></td>
+                        <td>2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_ACTG_015</strong></td>
+                        <td>ACTG 5208 Nevirapine Trial</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">177</td>
+                        <td><span class="study-type type-actg">ACTG</span></td>
+                        <td>2005-2008</td>
+                    </tr>
+                    <tr>
+                        <td><strong>JHB_ACTG_016</strong></td>
+                        <td>ACTG 5221 HIV/TB Coinfection</td>
+                        <td><span class="location-badge location-johannesburg">Johannesburg</span></td>
+                        <td class="sample-size">78</td>
+                        <td><span class="study-type type-actg">ACTG</span></td>
+                        <td>2007-2008</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number">24</div>
+                <div class="stat-label">Total Studies</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">20,074</div>
+                <div class="stat-label">Total Participants</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Study Sites</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Study Types</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Calculate total sample size dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const sampleSizes = document.querySelectorAll('.sample-size');
+            let total = 0;
+            sampleSizes.forEach(cell => {
+                const value = parseInt(cell.textContent.replace(/,/g, ''));
+                if (!isNaN(value)) {
+                    total += value;
+                }
+            });
+            
+            // Update the total participants stat
+            const totalStat = document.querySelector('.stats-container .stat-box:nth-child(2) .stat-number');
+            if (totalStat) {
+                totalStat.textContent = total.toLocaleString();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{siunitx}
+\usepackage[font=small,labelfont=bf]{caption}
+
+% Nature journal style colors
+\definecolor{naturegray}{RGB}{102,102,102}
+\definecolor{natureblue}{RGB}{0,102,153}
+\definecolor{lightgray}{RGB}{247,247,247}
+
+% Column types
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\begin{document}
+
+\begin{table*}[!htbp]
+\centering
+\caption{\textbf{Overview of studies included in the RP2 research portfolio.} The portfolio comprises 24 studies conducted across two major sub-Saharan African sites (Abidjan, Côte d'Ivoire and Johannesburg, South Africa) spanning multiple research domains including HIV treatment, prevention, mother-to-child transmission (MTCT), and COVID-19 response. Study types include randomized controlled trials, observational cohorts, community-based studies, and collaborative network trials. Sample sizes range from 78 to 2,930 participants, with a total enrollment of 20,074 individuals across all studies.}
+\label{tab:rp2_studies}
+\footnotesize
+\begin{tabular}{@{}p{2.5cm}p{4.2cm}p{1.5cm}r p{1.8cm}p{1.8cm}@{}}
+\toprule
+\textbf{Study ID} & \textbf{Study Name} & \textbf{City} & \textbf{Sample Size} & \textbf{Study Type} & \textbf{Period} \\
+\midrule
+
+\multicolumn{6}{@{}l}{\textit{\color{naturegray}Abidjan, Côte d'Ivoire}} \\
+\midrule
+PACCI\_Temprano & ANRS 12136 Temprano Trial & Abidjan & 2,056 & Clinical Trial & 2008--15 \\
+PACCI\_Statis & ANRS 12289 STATIS Trial & Abidjan & 1,571 & Clinical Trial & 2013--17 \\
+PACCI\_Primo\_CI & Primo-CI Cohort & Abidjan & 1,534 & Cohort & 2004--10 \\
+PACCI\_Ditrame\_Plus & Ditrame-Plus MTCT & Abidjan & 1,200 & MTCT & 2001--05 \\
+PACCI\_MTCT\_Plus & MTCT-Plus Program & Abidjan & 890 & MTCT & 2003--08 \\
+PACCI\_Voltart & ANRS 12186 VOLTART & Abidjan & 738 & Clinical Trial & 2012--16 \\
+PACCI\_Trivacan & Trivacan Study & Abidjan & 672 & Clinical Trial & 2009--12 \\
+PACCI\_Virage & VIRAGE Cohort & Abidjan & 501 & Cohort & 2010--15 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{\color{naturegray}Johannesburg, South Africa}} \\
+\midrule
+JHB\_Aurum\_009 & Thol'impilo HIV Linkage & J'burg & 2,930 & Community & 2013--17 \\
+JHB\_VIDA\_007 & ChAdOx1 COVID Vaccine & J'burg & 2,129 & COVID-19 & 2020 \\
+JHB\_WRHI\_001 & WRHI001 Stavudine vs Tenofovir & J'burg & 1,072 & Clinical Trial & Multi-year \\
+JHB\_EZIN\_002 & ADVANCE HIV Trial & J'burg & 1,053 & Clinical Trial & 2017--18 \\
+JHB\_DPHRU\_053 & MASC Study & J'burg & 1,013 & Cohort & 2017 \\
+JHB\_ACTG\_021 & ACTG 5199 Neurological Study & J'burg & 671 & ACTG & 2006--10 \\
+JHB\_VIDA\_008 & COVID Healthcare Worker Study & J'burg & 557 & COVID-19 & Apr--Sep 2020 \\
+JHB\_JHSPH\_005 & TB Prevention Trial & J'burg & 524 & Academic & Multi-year \\
+JHB\_SCHARP\_006 & HPTN 082 PrEP Young Women & J'burg & 451 & Prevention & 2016--18 \\
+JHB\_SCHARP\_004 & HPTN 075 MSM Prevention & J'burg & 401 & Prevention & 2015--17 \\
+JHB\_WRHI\_003 & WRHI003 Darunavir vs Lopinavir & J'burg & 305 & Clinical Trial & 2016--17 \\
+JHB\_DPHRU\_013 & Birth to Twenty Plus Cohort & J'burg & 247 & Cohort & 2011--13 \\
+JHB\_EZIN\_025 & EZIN025 COVID Treatment & J'burg & 192 & COVID-19 & 2020 \\
+JHB\_ACTG\_015 & ACTG 5208 Nevirapine Trial & J'burg & 177 & ACTG & 2005--08 \\
+JHB\_ACTG\_016 & ACTG 5221 HIV/TB Coinfection & J'burg & 78 & ACTG & 2007--08 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\vspace{0.5cm}
+\footnotesize
+\noindent\textbf{Study types:} ACTG, AIDS Clinical Trials Group; COVID-19, coronavirus disease 2019 studies; MTCT, mother-to-child transmission studies. Multi-year indicates studies spanning multiple years with specific dates not available. The RP2 portfolio represents collaborative research across francophone and anglophone sub-Saharan Africa, encompassing diverse study designs and research questions in HIV/AIDS and infectious disease research. Total participant enrollment across all studies: \textit{n} = 20,074.
+
+% Summary statistics table
+\begin{table}[!htbp]
+\centering
+\caption{\textbf{Summary characteristics of the RP2 study portfolio.}}
+\label{tab:rp2_summary}
+\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+\textbf{Characteristic} & \textbf{Value} \\
+\midrule
+Total number of studies & 24 \\
+Total participants enrolled & 20,074 \\
+Study sites & 2 \\
+\quad Abidjan, Côte d'Ivoire & 8 studies \\
+\quad Johannesburg, South Africa & 16 studies \\
+\midrule
+\textbf{Study types} & \\
+\quad Clinical trials & 10 \\
+\quad Cohort studies & 4 \\
+\quad COVID-19 studies & 3 \\
+\quad ACTG trials & 3 \\
+\quad Prevention studies & 2 \\
+\quad MTCT studies & 2 \\
+\midrule
+\textbf{Sample size distribution} & \\
+\quad Median (IQR) & 738 (305--1,072) \\
+\quad Range & 78--2,930 \\
+\quad Studies with $>$1,000 participants & 9 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

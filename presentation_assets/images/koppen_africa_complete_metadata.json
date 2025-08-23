@@ -1,0 +1,129 @@
+{
+  "title": "K\u00f6ppen-Geiger Climate Classification - African Continent",
+  "description": "Climate zones for Africa (2076-2100 A1FI scenario) clipped from global data",
+  "source_file": "c2076_2100_A1FI.shp",
+  "processing_date": "2025-08-23T11:59:28.168088",
+  "total_polygons": 225,
+  "unique_climate_zones": 16,
+  "geographic_extent": {
+    "description": "African continent approximately",
+    "bounding_box": {
+      "west_longitude": -20,
+      "south_latitude": -35,
+      "east_longitude": 55,
+      "north_latitude": 40
+    }
+  },
+  "coordinate_system": "EPSG:4326 (WGS84)",
+  "climate_zones": {
+    "11": {
+      "label": "Af - Tropical rainforest climate",
+      "short_code": "",
+      "polygon_count": 14,
+      "percentage": 6.2
+    },
+    "12": {
+      "label": "Am - Tropical monsoon climate",
+      "short_code": "",
+      "polygon_count": 26,
+      "percentage": 11.6
+    },
+    "13": {
+      "label": "As - Tropical dry savanna climate",
+      "short_code": "",
+      "polygon_count": 12,
+      "percentage": 5.3
+    },
+    "14": {
+      "label": "Aw - Tropical wet savanna climate",
+      "short_code": "",
+      "polygon_count": 17,
+      "percentage": 7.6
+    },
+    "21": {
+      "label": "BWh - Hot desert climate",
+      "short_code": "",
+      "polygon_count": 3,
+      "percentage": 1.3
+    },
+    "22": {
+      "label": "BWk - Cold desert climate",
+      "short_code": "",
+      "polygon_count": 14,
+      "percentage": 6.2
+    },
+    "26": {
+      "label": "BSh/BSk - Semi-arid climate variant",
+      "short_code": "",
+      "polygon_count": 20,
+      "percentage": 8.9
+    },
+    "27": {
+      "label": "BSk - Cold semi-arid steppe climate",
+      "short_code": "",
+      "polygon_count": 65,
+      "percentage": 28.9
+    },
+    "31": {
+      "label": "Csa - Mediterranean hot summer climate",
+      "short_code": "",
+      "polygon_count": 8,
+      "percentage": 3.6
+    },
+    "32": {
+      "label": "Csb - Mediterranean warm summer climate",
+      "short_code": "",
+      "polygon_count": 4,
+      "percentage": 1.8
+    },
+    "34": {
+      "label": "Cwa - Humid subtropical climate",
+      "short_code": "",
+      "polygon_count": 28,
+      "percentage": 12.4
+    },
+    "35": {
+      "label": "Cwb - Subtropical highland climate",
+      "short_code": "",
+      "polygon_count": 1,
+      "percentage": 0.4
+    },
+    "37": {
+      "label": "Cfa - Humid subtropical climate",
+      "short_code": "",
+      "polygon_count": 5,
+      "percentage": 2.2
+    },
+    "38": {
+      "label": "Cfb - Oceanic climate",
+      "short_code": "",
+      "polygon_count": 5,
+      "percentage": 2.2
+    },
+    "41": {
+      "label": "Dsa - Hot summer continental climate",
+      "short_code": "",
+      "polygon_count": 2,
+      "percentage": 0.9
+    },
+    "45": {
+      "label": "Dfb - Warm summer humid continental climate",
+      "short_code": "",
+      "polygon_count": 1,
+      "percentage": 0.4
+    }
+  },
+  "data_fields": {
+    "ID": "Original polygon identifier",
+    "GRIDCODE": "Numeric climate zone code",
+    "koppen_label": "Full K\u00f6ppen climate classification with description",
+    "koppen_code": "Short K\u00f6ppen climate code (e.g., Af, BWh, Csa)",
+    "geometry": "Polygon geometry in WGS84"
+  },
+  "usage_notes": [
+    "This data represents projected climate zones for 2076-2100 under A1FI scenario",
+    "GRIDCODE values correspond to specific K\u00f6ppen climate classifications",
+    "Data has been clipped to African continental boundaries",
+    "Suitable for web mapping applications using coordinate system EPSG:4326"
+  ]
+}
