@@ -14,7 +14,7 @@ suppressPackageStartupMessages({
 theme_publication <- function() {
   theme_minimal() +
     theme(
-      text = element_text(family = "Arial", size = 10),
+      text = element_text(size = 10),
       plot.title = element_text(size = 12, hjust = 0.5, face = "bold"),
       plot.subtitle = element_text(size = 10, hjust = 0.5, color = "gray30"),
       axis.text = element_text(size = 9),
@@ -23,10 +23,10 @@ theme_publication <- function() {
       legend.text = element_text(size = 9),
       legend.position = "bottom",
       legend.key.size = unit(0.4, "cm"),
-      panel.grid = element_line(color = "gray90", size = 0.25),
+      panel.grid = element_line(color = "gray90", linewidth = 0.25),
       panel.background = element_rect(fill = "white", color = NA),
       plot.background = element_rect(fill = "white", color = NA),
-      legend.background = element_rect(fill = "white", color = "gray70", size = 0.5)
+      legend.background = element_rect(fill = "white", color = "gray70", linewidth = 0.5)
     )
 }
 
@@ -106,7 +106,7 @@ create_africa_climate_map <- function() {
       geom_sf(data = climate_data, 
               aes(fill = koppen_code), 
               color = "white", 
-              size = 0.1, 
+              linewidth = 0.1, 
               alpha = 0.8) +
       # Add study locations
       geom_sf(data = study_sf, 
@@ -115,13 +115,11 @@ create_africa_climate_map <- function() {
               fill = "#E3120B",
               shape = 21,
               stroke = 1.5) +
-      # Add study location labels
-      geom_sf_text(data = study_sf,
-                   aes(label = name),
-                   nudge_x = 2, nudge_y = 1,
-                   size = 3.5, 
-                   fontface = "bold",
-                   color = "black") +
+      # Add study location labels using annotate to avoid font issues
+      annotate("text", x = -4.024429 + 3, y = 5.345317 + 1, 
+               label = "Abidjan", size = 3.5, fontface = "bold") +
+      annotate("text", x = 28.034088 + 3, y = -26.195246 + 1, 
+               label = "Johannesburg", size = 3.5, fontface = "bold") +
       # Set colors
       scale_fill_manual(
         name = "Köppen-Geiger Climate",
@@ -207,13 +205,19 @@ ggsave("africa_climate_study_locations_r.png",
        dpi = 300, 
        bg = "white")
 
+# Save as SVG (vector format)
+ggsave("africa_climate_study_locations_r.svg", 
+       plot = map_plot,
+       width = 12, height = 9, 
+       bg = "white")
+
 # Save as PDF for publication
 ggsave("africa_climate_study_locations_r.pdf", 
        plot = map_plot,
        width = 12, height = 9, 
        bg = "white")
 
-cat("Maps saved as africa_climate_study_locations_r.png and .pdf\n")
+cat("Maps saved as africa_climate_study_locations_r.png, .svg and .pdf\n")
 
 # Display the plot
 print(map_plot)

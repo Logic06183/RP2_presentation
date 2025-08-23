@@ -262,7 +262,11 @@ def main():
     plt.savefig(output_file, dpi=300, bbox_inches='tight', 
                facecolor='white', edgecolor='none')
     
-    print(f"Map saved as {output_file}")
+    # Save as SVG (vector format)
+    plt.savefig('africa_climate_study_locations.svg', 
+               bbox_inches='tight', facecolor='white', edgecolor='none')
+    
+    print(f"Map saved as {output_file} and .svg")
     
     # Also save as PDF for publication
     plt.savefig('africa_climate_study_locations.pdf', 
