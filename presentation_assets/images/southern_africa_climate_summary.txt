@@ -1,0 +1,80 @@
+# Southern Africa Climate Characteristics Summary
+# Based on Köppen-Geiger climate zones for Malawi, South Africa, and Zimbabwe
+# Generated for Wellcome Trust grant application
+
+## Climate Zone Analysis
+
+### MALAWI
+Dominant Climate: Tropical Wet Savanna (Aw) - 74.1% coverage
+- Characteristics: Hot, wet summers with distinct dry season
+- Precipitation: High seasonal variation, wet season Nov-Apr
+- Temperature: Consistently warm, minimal seasonal variation
+- Climate vulnerability: #26 most vulnerable globally (ND-GAIN)
+- Recent changes: +1.0°C since 1980s, increased precipitation variability
+
+Secondary Climate: Cold Semi-Arid (BSk) - 25.9% coverage
+- Highland areas with cooler temperatures
+- Lower precipitation, more drought-prone
+
+### SOUTH AFRICA  
+Dominant Climate: Cold Desert (BWk) - 47.4% coverage
+- Characteristics: Arid conditions with cold winters
+- Precipitation: Very low, highly variable
+- Temperature: Large diurnal and seasonal variations
+- Climate vulnerability: #117 most vulnerable globally (ND-GAIN)
+- Recent changes: +1.2°C since 1980s, progressive drying in west
+
+Most Diverse Climate Profile: 11 different climate zones
+Other significant zones:
+- Cold Semi-Arid (BSk) - 43.8%: Interior plateau regions
+- Humid Subtropical (Cfa) - 3.1%: Eastern coastal areas
+- Tropical Wet Savanna (Aw) - 2.6%: Northern regions
+
+### ZIMBABWE
+Dominant Climate: Tropical Wet Savanna (Aw) - 57.4% coverage  
+- Characteristics: Distinct wet/dry seasons, moderate temperatures
+- Precipitation: Concentrated in summer months (Nov-Mar)
+- Temperature: Moderated by elevation
+- Climate vulnerability: #51 most vulnerable globally (ND-GAIN)
+- Recent changes: +1.0°C since 1980s, erratic rainfall patterns
+
+Secondary Climates:
+- Cold Desert (BWk) - 22.5%: Western regions
+- Cold Semi-Arid (BSk) - 20.1%: Central plateau
+
+## Key Climate-Health Implications
+
+### Precipitation Patterns & Health Risks:
+1. **Malawi & Zimbabwe** (Tropical Savanna): 
+   - Seasonal flooding/drought cycles affect water security
+   - Vector-borne disease patterns follow rainfall
+   - Food security tied to precipitation reliability
+
+2. **South Africa** (Cold Desert/Semi-Arid):
+   - Water scarcity as primary health risk
+   - Heat stress in arid regions
+   - Urban heat islands in metropolitan areas
+
+### Temperature Rises & Adaptation:
+- All three countries show ~1.0-1.2°C warming since 1980s
+- South Africa most vulnerable to further warming (arid baseline)
+- Highland areas (BWk/BSk zones) provide some thermal refugia
+
+### Development Context:
+- Economic capacity for adaptation varies dramatically (GDP: $520-$6,023)
+- Health system strength correlates with income level
+- Urban vs rural populations face different climate exposures
+
+## World Bank Climate Data Integration Opportunities:
+
+Based on dominant climate zones identified:
+1. **Temperature data**: Daily min/max for BWk, BSk, Aw zones
+2. **Precipitation data**: Seasonal patterns, variability indices
+3. **Extreme events**: Heat wave frequency, drought indices
+4. **Agricultural climate**: Growing degree days, water stress indicators
+
+## Files Generated:
+- southern_africa_enhanced_climate_map.svg: Climate zones map
+- southern_africa_integrated_climate_development_map.png: Map + data table
+- southern_africa_climate_summary.json: Detailed climate zone data
+- southern_africa_climate_summary.csv: Summary statistics

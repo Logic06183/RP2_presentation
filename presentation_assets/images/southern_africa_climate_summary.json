@@ -1,0 +1,147 @@
+{
+  "South Africa": {
+    "country": ["South Africa"],
+    "iso_code": ["ZAF"],
+    "population": [58558270],
+    "dominant_climate": ["BWk"],
+    "dominant_climate_label": ["BWk - Cold desert climate"],
+    "dominant_climate_coverage": [47.4],
+    "climate_zones": [
+      {
+        "koppen_code": "BWk",
+        "koppen_label": "BWk - Cold desert climate",
+        "total_area_km2": 1851120.9805,
+        "polygon_count": 2,
+        "percent_coverage": 47.4
+      },
+      {
+        "koppen_code": "BSk",
+        "koppen_label": "BSk - Cold semi-arid steppe climate",
+        "total_area_km2": 1712511.8665,
+        "polygon_count": 8,
+        "percent_coverage": 43.8
+      },
+      {
+        "koppen_code": "Cfa",
+        "koppen_label": "Cfa - Humid subtropical climate",
+        "total_area_km2": 119843.1704,
+        "polygon_count": 2,
+        "percent_coverage": 3.1
+      },
+      {
+        "koppen_code": "Aw",
+        "koppen_label": "Aw - Tropical wet savanna climate",
+        "total_area_km2": 102034.2788,
+        "polygon_count": 3,
+        "percent_coverage": 2.6
+      },
+      {
+        "koppen_code": "Csa",
+        "koppen_label": "Csa - Mediterranean hot summer climate",
+        "total_area_km2": 46704.1316,
+        "polygon_count": 5,
+        "percent_coverage": 1.2
+      },
+      {
+        "koppen_code": "Cwa",
+        "koppen_label": "Cwa - Humid subtropical climate",
+        "total_area_km2": 28294.753,
+        "polygon_count": 2,
+        "percent_coverage": 0.7
+      },
+      {
+        "koppen_code": "Cfb",
+        "koppen_label": "Cfb - Oceanic climate",
+        "total_area_km2": 24180.0747,
+        "polygon_count": 2,
+        "percent_coverage": 0.6
+      },
+      {
+        "koppen_code": "As",
+        "koppen_label": "As - Tropical dry savanna climate",
+        "total_area_km2": 10250.8718,
+        "polygon_count": 2,
+        "percent_coverage": 0.3
+      },
+      {
+        "koppen_code": "BSh/BSk",
+        "koppen_label": "BSh/BSk - Semi-arid climate variant",
+        "total_area_km2": 5285.2241,
+        "polygon_count": 1,
+        "percent_coverage": 0.1
+      },
+      {
+        "koppen_code": "BWh",
+        "koppen_label": "BWh - Hot desert climate",
+        "total_area_km2": 5213.932,
+        "polygon_count": 1,
+        "percent_coverage": 0.1
+      },
+      {
+        "koppen_code": "Cwb",
+        "koppen_label": "Cwb - Subtropical highland climate",
+        "total_area_km2": 2555.054,
+        "polygon_count": 1,
+        "percent_coverage": 0.1
+      }
+    ],
+    "total_area_km2": [3907994.3374]
+  },
+  "Zimbabwe": {
+    "country": ["Zimbabwe"],
+    "iso_code": ["ZWE"],
+    "population": [14645468],
+    "dominant_climate": ["Aw"],
+    "dominant_climate_label": ["Aw - Tropical wet savanna climate"],
+    "dominant_climate_coverage": [57.4],
+    "climate_zones": [
+      {
+        "koppen_code": "Aw",
+        "koppen_label": "Aw - Tropical wet savanna climate",
+        "total_area_km2": 4699807.448,
+        "polygon_count": 1,
+        "percent_coverage": 57.4
+      },
+      {
+        "koppen_code": "BWk",
+        "koppen_label": "BWk - Cold desert climate",
+        "total_area_km2": 1845863.9481,
+        "polygon_count": 1,
+        "percent_coverage": 22.5
+      },
+      {
+        "koppen_code": "BSk",
+        "koppen_label": "BSk - Cold semi-arid steppe climate",
+        "total_area_km2": 1645407.2814,
+        "polygon_count": 1,
+        "percent_coverage": 20.1
+      }
+    ],
+    "total_area_km2": [8191078.6775]
+  },
+  "Malawi": {
+    "country": ["Malawi"],
+    "iso_code": ["MWI"],
+    "population": [18628747],
+    "dominant_climate": ["Aw"],
+    "dominant_climate_label": ["Aw - Tropical wet savanna climate"],
+    "dominant_climate_coverage": [74.1],
+    "climate_zones": [
+      {
+        "koppen_code": "Aw",
+        "koppen_label": "Aw - Tropical wet savanna climate",
+        "total_area_km2": 4699807.448,
+        "polygon_count": 1,
+        "percent_coverage": 74.1
+      },
+      {
+        "koppen_code": "BSk",
+        "koppen_label": "BSk - Cold semi-arid steppe climate",
+        "total_area_km2": 1645407.2814,
+        "polygon_count": 1,
+        "percent_coverage": 25.9
+      }
+    ],
+    "total_area_km2": [6345214.7294]
+  }
+}
