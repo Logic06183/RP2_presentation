@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='864.00pt' height='576.00pt' viewBox='0 0 864.00 576.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='864.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA=)'>
+<rect x='0.00' y='0.00' width='864.00' height='576.00' style='stroke-width: 0.75; stroke: none; fill: #FFFFFF;' />
+<rect x='0.00' y='0.00' width='864.00' height='576.00' style='stroke-width: 0.75; stroke: none; fill: #FFFFFF;' />
+<text x='432.00' y='65.02' text-anchor='middle' style='font-size: 17.07px; font-weight: bold; font-family: "Arial";' textLength='341.25px' lengthAdjust='spacingAndGlyphs'>Köppen-Geiger Climate Classification Key</text>
+<rect x='78.55' y='117.82' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #228B22;' />
+<text x='109.96' y='127.21' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='88.38px' lengthAdjust='spacingAndGlyphs'>Am - Tropical monsoon</text>
+<rect x='259.20' y='117.82' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #90EE90;' />
+<text x='290.62' y='127.21' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='88.23px' lengthAdjust='spacingAndGlyphs'>Aw - Tropical savannah</text>
+<rect x='439.85' y='117.82' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFD700;' />
+<text x='471.27' y='127.21' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='64.52px' lengthAdjust='spacingAndGlyphs'>BWh - Hot desert</text>
+<rect x='620.51' y='117.82' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #FF8C00;' />
+<text x='651.93' y='127.21' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='68.48px' lengthAdjust='spacingAndGlyphs'>BWk - Cold desert</text>
+<rect x='78.55' y='144.00' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #FF6347;' />
+<text x='109.96' y='153.39' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='73.80px' lengthAdjust='spacingAndGlyphs'>BSh - Hot semi-arid</text>
+<rect x='259.20' y='144.00' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #DC143C;' />
+<text x='290.62' y='153.39' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='77.77px' lengthAdjust='spacingAndGlyphs'>BSk - Cold semi-arid</text>
+<rect x='439.85' y='144.00' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #8B008B;' />
+<text x='471.27' y='153.39' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='123.75px' lengthAdjust='spacingAndGlyphs'>Csa - Mediterranean hot summer</text>
+<rect x='620.51' y='144.00' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #32CD32;' />
+<text x='651.93' y='153.39' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='132.59px' lengthAdjust='spacingAndGlyphs'>Csb - Mediterranean warm summer</text>
+<rect x='78.55' y='170.18' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #1E90FF;' />
+<text x='109.96' y='179.57' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='93.23px' lengthAdjust='spacingAndGlyphs'>Cwa - Humid subtropical</text>
+<rect x='259.20' y='170.18' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #4169E1;' />
+<text x='290.62' y='179.57' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='102.92px' lengthAdjust='spacingAndGlyphs'>Cwb - Subtropical highland</text>
+<rect x='439.85' y='170.18' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #00CED1;' />
+<text x='471.27' y='179.57' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='85.70px' lengthAdjust='spacingAndGlyphs'>Cwc - Subtropical cold</text>
+<rect x='620.51' y='170.18' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #87CEEB;' />
+<text x='651.93' y='179.57' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='84.88px' lengthAdjust='spacingAndGlyphs'>Cfa - Humid temperate</text>
+<rect x='78.55' y='196.36' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #B0E0E6;' />
+<text x='109.96' y='205.76' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='51.27px' lengthAdjust='spacingAndGlyphs'>Cfb - Oceanic</text>
+<rect x='259.20' y='196.36' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #20B2AA;' />
+<text x='290.62' y='205.76' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='83.50px' lengthAdjust='spacingAndGlyphs'>Dwc - Cold, dry winter</text>
+<rect x='439.85' y='196.36' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #D3D3D3;' />
+<text x='471.27' y='205.76' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='96.31px' lengthAdjust='spacingAndGlyphs'>Dfb - Cold, no dry season</text>
+<rect x='620.51' y='196.36' width='23.56' height='13.09' style='stroke-width: 0.64; stroke-linecap: butt; stroke-linejoin: miter; fill: #696969;' />
+<text x='651.93' y='205.76' style='font-size: 7.97px; font-weight: bold; font-family: "Arial";' textLength='43.58px' lengthAdjust='spacingAndGlyphs'>ET - Tundra</text>
+<text x='432.00' y='371.64' text-anchor='middle' style='font-size: 14.23px; font-weight: bold; font-family: "Arial";' textLength='82.97px' lengthAdjust='spacingAndGlyphs'>Data Source</text>
+<text x='432.00' y='402.53' text-anchor='middle' style='font-size: 9.10px; font-family: "Arial";' textLength='540.83px' lengthAdjust='spacingAndGlyphs'>Beck, H.E., T.R. McVicar, N. Vergopolan, A. Berg, N.J. Lutsko, A. Dufour, Z. Zeng, X. Jiang, A.I.J.M. van Dijk, and D.G. Miralles (2023).</text>
+<text x='432.00' y='435.25' text-anchor='middle' style='font-size: 9.10px; font-family: "Arial";' textLength='504.84px' lengthAdjust='spacingAndGlyphs'>High-resolution (1 km) Köppen-Geiger maps for 1901–2099 based on constrained CMIP6 projections. Scientific Data 10, 724.</text>
+<text x='432.00' y='468.29' text-anchor='middle' style='font-size: 9.96px; font-weight: bold;fill: #0066CC; font-family: "Arial";' textLength='155.39px' lengthAdjust='spacingAndGlyphs'>DOI: 10.1038/s41597-023-02549-6</text>
+<text x='432.00' y='494.16' text-anchor='middle' style='font-size: 9.10px;fill: #0066CC; font-family: "Arial";' textLength='227.98px' lengthAdjust='spacingAndGlyphs'>Available: https://figshare.com/articles/dataset/21789074</text>
+<text x='432.00' y='526.69' text-anchor='middle' style='font-size: 8.54px; font-style: italic;fill: #666666; font-family: "Arial";' textLength='335.36px' lengthAdjust='spacingAndGlyphs'>Baseline: 1991-2020 (30-year climate normal) | Projections: 2071-2099 CMIP6 scenarios</text>
+<rect x='47.13' y='32.73' width='769.75' height='510.55' style='stroke-width: 2.13; stroke-linecap: butt; stroke-linejoin: miter;' />
+</g>
+</g>
+</svg>
