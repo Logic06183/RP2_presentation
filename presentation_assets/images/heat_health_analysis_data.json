@@ -1,0 +1,24 @@
+{
+  "Johannesburg": {
+    "hvi_mean": 0.5583293303952359,
+    "hvi_max": 0.8123443300890598,
+    "hvi_min": 0.22890280810872415,
+    "weights": {
+      "temperature": 0.3,
+      "vegetation": 0.2,
+      "population": 0.3,
+      "impervious": 0.2
+    }
+  },
+  "Abidjan": {
+    "hvi_mean": 0.5492260279190727,
+    "hvi_max": 0.8513988480894253,
+    "hvi_min": 0.1659447855650924,
+    "weights": {
+      "temperature": 0.3,
+      "vegetation": 0.2,
+      "population": 0.3,
+      "impervious": 0.2
+    }
+  }
+}

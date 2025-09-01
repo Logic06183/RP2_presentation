@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ec0d7acf7ad028e8e0df0f6b5b28053b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+        <h3 align="center" style="font-size:20px"><b>Johannesburg Heat Vulnerability Map</b></h3>
+        
+    
+            <div class="folium-map" id="map_ec0d7acf7ad028e8e0df0f6b5b28053b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ec0d7acf7ad028e8e0df0f6b5b28053b = L.map(
+                "map_ec0d7acf7ad028e8e0df0f6b5b28053b",
+                {
+                    center: [-26.2041, 28.0473],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_47e16a96a621d29df402a75f6151d1dc = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_47e16a96a621d29df402a75f6151d1dc.addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+            var tile_layer_23cf5925c027cb04b3f1cb8689d5c185 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_23cf5925c027cb04b3f1cb8689d5c185.addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+            var tile_layer_dc2ee8a7b5c55f753e9ec02204fdeca0 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_dc2ee8a7b5c55f753e9ec02204fdeca0.addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+            var heat_map_e2f9b3bea9e61ae949715106b98a5383 = L.heatLayer(
+                [[-26.17926429234944, 28.04038678494144, 0.8123957592679836], [-26.259694005902347, 28.06324510923447, 0.40919616423534183], [-26.12513935922463, 28.085671736457645, 0.3144091460070617], [-26.233143906701176, 28.021041509641094, 0.42838315689740364], [-26.1920018864217, 27.95163598776711, 0.602361513049481], [-26.163277745952435, 27.971106200119205, 0.3976457024564293], [-26.24950120377606, 27.976684814933236, 0.6192489889519252], [-26.235573748046214, 28.07718602334563, 0.6599641068895281], [-26.231319136226258, 28.052846129485495, 0.7252813963310069], [-26.234112692505295, 28.094671991052333, 0.3683704798044687], [-26.23418533061147, 28.139913909225445, 0.38542676439134516], [-26.230782440192126, 28.047023606883993, 0.9365242814551474], [-26.16297275439484, 27.98625781750145, 0.5181977532625877], [-26.06518434792238, 28.106981986214116, 0.4293981188678689], [-26.16717667100023, 28.0558684140595, 0.36194475143634364], [-26.254554267143256, 27.968135289323154, 0.4899443222417271], [-26.22713193854799, 28.100156111310945, 0.49665415678116653], [-26.26062761523408, 28.0540214441314, 0.8615378865278277], [-26.2379461000153, 28.077883814442043, 0.3038654819865217], [-26.174993860264347, 28.091687422979668, 0.8103050176286911], [-26.24606087616113, 28.03183938120744, 0.9041723981129154], [-26.279507664477375, 28.10228234878924, 0.34449084520021656], [-26.259416748700303, 27.987489668795966, 0.8107243248366448], [-26.16236022903848, 28.06212806921645, 0.6305504476133644], [-26.186018198747618, 28.015044012269744, 0.8325495340318282], [-26.129328287355825, 28.064209062599666, 0.6456569174550735], [-26.33508725520449, 28.08839512521876, 0.3177933887208666], [-26.27503752292957, 28.09942458086697, 0.6559994838152919], [-26.215083594391874, 28.06515562857559, 0.5872680461249408], [-26.243562916434897, 28.08448556418856, 0.35388593688015507], [-26.24452468014466, 28.022212147820774, 0.9507883566398011], [-26.17902758342376, 28.105209332646602, 0.9100224131314023], [-26.230588010188352, 28.072963371655668, 0.9247912989429844], [-26.13550689332251, 28.056077664697742, 0.9272639099464453], [-26.23920265469387, 28.03091689267011, 0.45955461377935913], [-26.140413318993023, 28.032702366458718, 0.9025114082794403], [-26.20384432716788, 28.035570643331244, 0.5921877022041453], [-26.223875822579014, 28.032843157176504, 0.5363306199825395], [-26.212164285583302, 28.067502542840728, 0.6631534352203562], [-26.251252840423362, 28.117497936932963, 0.9802474579046724], [-26.300038560764953, 28.04597430622754, 0.49938834606422733], [-26.198982615872517, 28.0256695359726, 0.651875316260203], [-26.213718048239055, 28.06237736711668, 0.40142641046385613], [-26.18710895179067, 28.046930992502773, 0.4694386900580503], [-26.14695885927425, 28.084896651634338, 0.46634628079467977], [-26.244191392167487, 28.116500785946634, 0.7426140814155056], [-26.174757145309986, 28.156822781290497, 0.3632028390380858], [-26.228771624110166, 28.093458130417098, 0.43056295727989796], [-26.19911743174562, 28.02212621729419, 0.7742950532895977], [-26.203642782712993, 28.029023035158374, 0.45854704263855656], [-26.257215185686306, 28.07097962153176, 0.7836564166717261], [-26.173072589201915, 28.039253131156848, 0.39626466090219525], [-26.24326266461681, 28.031196924189715, 0.947285532794994], [-26.22193725128841, 28.0751060899267, 0.7619888322239253], [-26.192727003269795, 28.11265713771412, 0.6707554048492045], [-26.220324547891444, 28.037006664145224, 0.9280510305673286], [-26.19110586028758, 28.086391143588866, 0.5373208537340904], [-26.139130159286776, 28.003942692197523, 0.9279771819668039], [-26.191575357482705, 28.064622410474847, 0.7494221523080014], [-26.192785586525055, 28.08967007162883, 0.3064379361316407], [-26.189446376335066, 28.01158242909868, 0.30354310869235307], [-26.195358349400426, 27.98645725538204, 0.7843266383848853], [-26.263665174860133, 28.08012768043169, 0.7985254549432751], [-26.241658971233196, 27.990778597343972, 0.8225439835826168], [-26.155931193537786, 28.067939046346826, 0.7603290246102403], [-26.24748205449897, 28.054593092621417, 0.5574010621416035], [-26.248575721481277, 28.006509485751728, 0.9811073883267118], [-26.160166322590456, 28.03532027459031, 0.741797038198084], [-26.203449905406107, 28.119976703857866, 0.7038327192384514], [-26.27442026335908, 28.04557351719526, 0.8057164806830537], [-26.257644624903055, 28.071423620762157, 0.95832100904704], [-26.210306619444083, 28.084317040897385, 0.9766583733305686], [-26.24643968590342, 27.971557638765706, 0.8957956700617998], [-26.250402330960576, 28.02165173411822, 0.6897608837208451], [-26.19544095370744, 28.06656586898644, 0.6990428190625554], [-26.192552313852744, 28.00685315543048, 0.9930376950729842], [-26.2011895640777, 27.99015148510847, 0.9141611503495688], [-26.160477642116977, 28.100609927204886, 0.7917388587909765], [-26.272983468397854, 28.000408748004244, 0.8665528088349594], [-26.18887754400646, 28.060160374549007, 0.9392683867895298], [-26.178347615684697, 28.239936574532734, 0.8588066252767426], [-26.137555933601398, 28.096710130525206, 0.8570548686052707], [-26.219863462232016, 28.085248461024662, 0.5629080668479608], [-26.195848860094532, 28.00450355410853, 0.32515959165771946], [-26.088367071666326, 27.953936740370413, 0.500578876489799], [-26.224826590269494, 28.051309935627042, 0.3261437321244501], [-26.227696593289473, 28.101747529848367, 0.38894235885631934], [-26.126080992943358, 28.053727550003554, 0.4510747192477902], [-26.240618331585857, 28.058122929479097, 0.3361772048180254], [-26.084648202130378, 28.139470687916027, 0.7462009310487445], [-26.30535712933288, 28.05662271573847, 0.8566303363380925], [-26.22632493721096, 27.963843382045475, 0.35491946693958615], [-26.178850636050978, 28.090587759708505, 0.5862670610899889], [-26.22081235455752, 28.03140765467447, 0.4751700287152167], [-26.115827287985944, 28.06754908554805, 0.7621381637024118], [-26.18523518672698, 28.129867549323976, 0.7282045223640465], [-26.2800684982977, 28.023088296356686, 0.5491808750558831], [-26.215969598060333, 28.140900284023616, 0.368483912455701], [-26.366163367003455, 27.996080617933284, 0.4212413089370106], [-26.303848078577882, 27.982290357920327, 0.7310950686365515]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_e2f9b3bea9e61ae949715106b98a5383.addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+            var circle_marker_3c47ab9682798825b125417f909c16a5 = L.circleMarker(
+                [-26.2041, 28.0473],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+        var popup_5e434e7cc5f3df485553e4151bceaf97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a572f7cb644da6db61015fe9ce22a8b5 = $(`<div id="html_a572f7cb644da6db61015fe9ce22a8b5" style="width: 100.0%; height: 100.0%;">CBD<br>Risk Level: High</div>`)[0];
+                popup_5e434e7cc5f3df485553e4151bceaf97.setContent(html_a572f7cb644da6db61015fe9ce22a8b5);
+            
+        
+
+        circle_marker_3c47ab9682798825b125417f909c16a5.bindPopup(popup_5e434e7cc5f3df485553e4151bceaf97)
+        ;
+
+        
+    
+    
+            var circle_marker_8443278e239bec1b7f8dbba19013cdf0 = L.circleMarker(
+                [-26.1541, 28.0773],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+        var popup_4ff0187da5f25c5d170d6895b8fcdff8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8b09e2b4f54b0a3c0e00eeb541a0410 = $(`<div id="html_c8b09e2b4f54b0a3c0e00eeb541a0410" style="width: 100.0%; height: 100.0%;">Industrial Zone<br>Risk Level: Very High</div>`)[0];
+                popup_4ff0187da5f25c5d170d6895b8fcdff8.setContent(html_c8b09e2b4f54b0a3c0e00eeb541a0410);
+            
+        
+
+        circle_marker_8443278e239bec1b7f8dbba19013cdf0.bindPopup(popup_4ff0187da5f25c5d170d6895b8fcdff8)
+        ;
+
+        
+    
+    
+            var circle_marker_4b63fea3ad4ac5742b7359b7b20f404c = L.circleMarker(
+                [-26.2441, 28.0673],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+        var popup_c537abc2480c3eb13a8922dbada19ac2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db700df5251ec45e40eb485dcc41cacf = $(`<div id="html_db700df5251ec45e40eb485dcc41cacf" style="width: 100.0%; height: 100.0%;">Residential Area<br>Risk Level: Medium</div>`)[0];
+                popup_c537abc2480c3eb13a8922dbada19ac2.setContent(html_db700df5251ec45e40eb485dcc41cacf);
+            
+        
+
+        circle_marker_4b63fea3ad4ac5742b7359b7b20f404c.bindPopup(popup_c537abc2480c3eb13a8922dbada19ac2)
+        ;
+
+        
+    
+    
+            var circle_marker_8b147c1a51f5f88ac7f970e6069d8319 = L.circleMarker(
+                [-26.1841, 27.9973],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+        var popup_40a36027bf8f2381316fdffcbbe7a7f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27c19893ef33e63a6d7acd0c97672634 = $(`<div id="html_27c19893ef33e63a6d7acd0c97672634" style="width: 100.0%; height: 100.0%;">Green Belt<br>Risk Level: Low</div>`)[0];
+                popup_40a36027bf8f2381316fdffcbbe7a7f5.setContent(html_27c19893ef33e63a6d7acd0c97672634);
+            
+        
+
+        circle_marker_8b147c1a51f5f88ac7f970e6069d8319.bindPopup(popup_40a36027bf8f2381316fdffcbbe7a7f5)
+        ;
+
+        
+    
+    
+            var rectangle_9a3d10fd492b0538b11e68c748f44439 = L.rectangle(
+                [[-26.3, 27.9], [-26.0, 28.3]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+        
+    
+        var popup_fb37459b8ac0f8195afa83bd5c45b36f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_839ad9bc1e10c497dbe03ade0d052bdf = $(`<div id="html_839ad9bc1e10c497dbe03ade0d052bdf" style="width: 100.0%; height: 100.0%;">Johannesburg Study Area</div>`)[0];
+                popup_fb37459b8ac0f8195afa83bd5c45b36f.setContent(html_839ad9bc1e10c497dbe03ade0d052bdf);
+            
+        
+
+        rectangle_9a3d10fd492b0538b11e68c748f44439.bindPopup(popup_fb37459b8ac0f8195afa83bd5c45b36f)
+        ;
+
+        
+    
+    
+            var layer_control_4016fa11db6daa034a52b78147705d0d_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_47e16a96a621d29df402a75f6151d1dc,
+                    "cartodbpositron" : tile_layer_23cf5925c027cb04b3f1cb8689d5c185,
+                    "cartodbdarkmatter" : tile_layer_dc2ee8a7b5c55f753e9ec02204fdeca0,
+                },
+                overlays :  {
+                    "Heat Vulnerability" : heat_map_e2f9b3bea9e61ae949715106b98a5383,
+                },
+            };
+            let layer_control_4016fa11db6daa034a52b78147705d0d = L.control.layers(
+                layer_control_4016fa11db6daa034a52b78147705d0d_layers.base_layers,
+                layer_control_4016fa11db6daa034a52b78147705d0d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_ec0d7acf7ad028e8e0df0f6b5b28053b);
+
+        
+</script>
+</html>

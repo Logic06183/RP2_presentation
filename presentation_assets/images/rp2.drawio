@@ -1,0 +1,194 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.1">
+  <diagram name="AI Heat-Health Summary" id="Bg4GZkrGypQcDR8X8vk6">
+    <mxGraphModel dx="1234" dy="926" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4ECDC4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="146" y="139" width="878" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-2" value="Explainable AI for Heat-Health-Socioeconomic Interactions" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="166" y="149" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-3" value="Johannesburg Clinical Trial Dataset • 2,334 Participants • XAI Analysis" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="166" y="179" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECF0F1;strokeColor=#3498DB;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="166" y="239" width="853" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-7" value="AI-DRIVEN BREAKTHROUGH DISCOVERIES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="426" y="254" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-8" value="61% Glucose&#xa;Variance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="186" y="289" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-9" value="21-Day Optimal&#xa;Window" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498DB;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="358" y="289" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-10" value="1,300x Risk&#xa;Range" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F39C12;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="529" y="289" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-11" value="52% Gender&#xa;Effect" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9B59B6;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="701" y="289" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-12" value="R² = 0.611&#xa;(p&lt;0.001)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27AE60;strokeColor=none;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="872" y="287" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-13" value="MODEL PERFORMANCE &amp; KEY FINDINGS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="186" y="369" width="350" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F4FD;strokeColor=#3498DB;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="186" y="399" width="320" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-15" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E74C3C;" vertex="1" parent="1">
+          <mxGeometry x="206" y="419" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-16" value="Glucose: R² = 0.611***" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="416" y="419" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-17" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F39C12;" vertex="1" parent="1">
+          <mxGeometry x="206" y="449" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-18" value="BP (Diastolic): 0.141*" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="296" y="449" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3498DB;" vertex="1" parent="1">
+          <mxGeometry x="206" y="474" width="70" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-20" value="BP (Systolic): 0.115*" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="286" y="474" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-21" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27AE60;" vertex="1" parent="1">
+          <mxGeometry x="206" y="499" width="50" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-22" value="Hemoglobin: 0.071" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="266" y="499" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-23" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F8F0;strokeColor=#27AE60;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="546" y="399" width="481" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-24" value="TEMPORAL PATTERN DISCOVERY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="566" y="399" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-25" value="" style="curved=1;endArrow=none;html=1;strokeColor=#27AE60;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="566" y="459" as="sourcePoint" />
+            <mxPoint x="846" y="479" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="706" y="439" />
+              <mxPoint x="776" y="469" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-26" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E74C3C;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="701" y="434" width="10" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-27" value="Peak: 21 days" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="666" y="419" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-28" value="• 21-day cumulative exposure optimal" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="566" y="469" width="280" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-29" value="• 58% improvement over single-day models" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="566" y="489" width="280" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-30" value="• Paradigm shift for early warning systems" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="566" y="509" width="280" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-31" value="GENDER &amp; SOCIOECONOMIC INSIGHTS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="186" y="569" width="350" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-32" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4E8F8;strokeColor=#9B59B6;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="169" y="594" width="333" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-33" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E74C3C;" vertex="1" parent="1">
+          <mxGeometry x="206" y="619" width="120" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-34" value="Female: +52%*" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="336" y="619" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-35" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3498DB;" vertex="1" parent="1">
+          <mxGeometry x="206" y="644" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-36" value="Male: Baseline" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="296" y="644" width="80" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-37" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDF2E8;strokeColor=#F39C12;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="552" y="599" width="480" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-38" value="SHAP FEATURE IMPORTANCE (Top Predictors)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="562" y="609" width="460" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-39" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E74C3C;" vertex="1" parent="1">
+          <mxGeometry x="572" y="629" width="100" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-40" value="Max Temp (21d): 23.4%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="682" y="627" width="120" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3498DB;" vertex="1" parent="1">
+          <mxGeometry x="572" y="644" width="80" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-42" value="Heat Vulnerability: 15.6%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="662" y="642" width="130" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-43" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#27AE60;" vertex="1" parent="1">
+          <mxGeometry x="572" y="659" width="70" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-44" value="Temp×Age: 8.9%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="652" y="657" width="100" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-45" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#9B59B6;" vertex="1" parent="1">
+          <mxGeometry x="812" y="629" width="60" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-46" value="Humidity: 7.8%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="882" y="627" width="100" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-47" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F39C12;" vertex="1" parent="1">
+          <mxGeometry x="812" y="644" width="50" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-48" value="Housing: 6.9%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="872" y="642" width="100" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-49" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#16A085;" vertex="1" parent="1">
+          <mxGeometry x="812" y="659" width="40" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-50" value="Income: 5.9%" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="862" y="657" width="100" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-51" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;" vertex="1" parent="1">
+          <mxGeometry x="166" y="699" width="882" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-52" value="CLINICAL APPLICATIONS &amp; IMPACT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="490" y="712" width="240" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-53" value="Precision Medicine:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#3498DB;" vertex="1" parent="1">
+          <mxGeometry x="186" y="744" width="130" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-54" value="Glucose monitoring priority during heat waves" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="326" y="744" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-55" value="Early Warning:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#27AE60;" vertex="1" parent="1">
+          <mxGeometry x="186" y="769" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-56" value="21-day forecasting enables health system preparedness" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="316" y="769" width="320" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-57" value="Targeted Care:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#E74C3C;" vertex="1" parent="1">
+          <mxGeometry x="646" y="744" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-58" value="Gender-specific heat adaptation protocols" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="766" y="744" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-59" value="Risk Mapping:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#F39C12;" vertex="1" parent="1">
+          <mxGeometry x="646" y="769" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-60" value="1,300x vulnerability stratification for targeting" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="766" y="769" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r3DL4HgNpFfkWtpdhxyJ-61" value="*p&lt;0.05, **p&lt;0.01, ***p&lt;0.001 | First quantified heat-health XAI relationships in Africa" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="396" y="793" width="440" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
