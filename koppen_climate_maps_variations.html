@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Köppen-Geiger Climate Maps - Africa</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        .map-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .map-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        .plot-container {
+            width: 100%;
+            height: 600px;
+        }
+        .section-title {
+            font-size: 24px;
+            color: #333;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Köppen-Geiger Climate Classification Maps</h1>
+        <h2>Southern Africa Region - Climate Zones and Study Sites</h2>
+        
+        <!-- Version 1: Study Sites Only (No City Names) -->
+        <div class="section-title">Version 1: Study Sites Only</div>
+        <div class="map-row">
+            <div class="map-container">
+                <div id="map1-sites" class="plot-container"></div>
+            </div>
+            <div class="map-container">
+                <div id="map2-sites" class="plot-container"></div>
+            </div>
+            <div class="map-container">
+                <div id="map3-sites" class="plot-container"></div>
+            </div>
+        </div>
+
+        <!-- Version 2: Study Sites with City Names -->
+        <div class="section-title">Version 2: Study Sites with City Names</div>
+        <div class="map-row">
+            <div class="map-container">
+                <div id="map1-labeled" class="plot-container"></div>
+            </div>
+            <div class="map-container">
+                <div id="map2-labeled" class="plot-container"></div>
+            </div>
+            <div class="map-container">
+                <div id="map3-labeled" class="plot-container"></div>
+            </div>
+        </div>
+
+        <!-- Version 3: Clean (No Labels) -->
+        <div class="section-title">Version 3: Clean Maps (No Labels)</div>
+        <div class="map-row">
+            <div class="map-container">
+                <div id="map1-clean" class="plot-container"></div>
+            </div>
+            <div class="map-container">
+                <div id="map2-clean" class="plot-container"></div>
+            </div>
+            <div class="map-container">
+                <div id="map3-clean" class="plot-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Köppen-Geiger climate zones with colors
+        const climateZones = [
+            // Tropical
+            { name: 'Af - Tropical rainforest', color: '#0000FE' },
+            { name: 'Am - Tropical monsoon', color: '#0077FF' },
+            { name: 'Aw - Tropical savanna', color: '#46AAFA' },
+            
+            // Arid
+            { name: 'BWh - Hot desert', color: '#FF0000' },
+            { name: 'BWk - Cold desert', color: '#FF9695' },
+            { name: 'BSh - Hot semi-arid', color: '#F59856' },
+            { name: 'BSk - Cold semi-arid', color: '#FECB96' },
+            
+            // Temperate
+            { name: 'Csa - Mediterranean hot summer', color: '#FFFF00' },
+            { name: 'Csb - Mediterranean warm summer', color: '#C6C700' },
+            { name: 'Cwa - Humid subtropical', color: '#96FF96' },
+            { name: 'Cwb - Subtropical highland', color: '#63C763' },
+            { name: 'Cfa - Humid subtropical', color: '#C6FF4D' },
+            { name: 'Cfb - Oceanic', color: '#66FF32' },
+            
+            // Continental
+            { name: 'Dfa - Hot-summer humid continental', color: '#00FFFF' },
+            { name: 'Dfb - Warm-summer humid continental', color: '#37C8FF' },
+            { name: 'Dwa - Monsoon-influenced hot-summer', color: '#ABB1FF' },
+            { name: 'Dwb - Monsoon-influenced warm-summer', color: '#5A77DB' },
+            
+            // Polar
+            { name: 'ET - Tundra', color: '#B1C4C4' },
+            { name: 'EF - Ice cap', color: '#6E7B7B' }
+        ];
+
+        // Study sites coordinates
+        const studySites = [
+            { name: 'Cape Town', lat: -33.9249, lon: 18.4241 },
+            { name: 'Mount Darwin', lat: -16.7833, lon: 31.5833 },
+            { name: 'Blantyre', lat: -15.7870, lon: 35.0055 }
+        ];
+
+        // Create climate zone polygons (simplified representation)
+        function createClimatePolygons() {
+            const traces = [];
+            
+            // Simplified climate zones for Southern Africa
+            const zones = [
+                {
+                    type: 'BWh',
+                    color: '#FF0000',
+                    lat: [-30, -20, -20, -30],
+                    lon: [10, 10, 25, 25]
+                },
+                {
+                    type: 'BSh',
+                    color: '#F59856',
+                    lat: [-25, -15, -15, -25],
+                    lon: [20, 20, 35, 35]
+                },
+                {
+                    type: 'Csa',
+                    color: '#FFFF00',
+                    lat: [-35, -32, -32, -35],
+                    lon: [17, 17, 20, 20]
+                },
+                {
+                    type: 'Cwb',
+                    color: '#63C763',
+                    lat: [-20, -10, -10, -20],
+                    lon: [25, 25, 40, 40]
+                },
+                {
+                    type: 'Aw',
+                    color: '#46AAFA',
+                    lat: [-15, -5, -5, -15],
+                    lon: [15, 15, 35, 35]
+                }
+            ];
+
+            zones.forEach(zone => {
+                traces.push({
+                    type: 'scattergeo',
+                    mode: 'lines',
+                    lat: [...zone.lat, zone.lat[0]],
+                    lon: [...zone.lon, zone.lon[0]],
+                    line: { color: zone.color, width: 0 },
+                    fill: 'toself',
+                    fillcolor: zone.color,
+                    opacity: 0.4,
+                    showlegend: false,
+                    hoverinfo: 'skip'
+                });
+            });
+
+            return traces;
+        }
+
+        // Create map function
+        function createMap(divId, title, showSites, showLabels) {
+            const traces = createClimatePolygons();
+
+            // Add study sites if requested
+            if (showSites) {
+                traces.push({
+                    type: 'scattergeo',
+                    mode: showLabels ? 'markers+text' : 'markers',
+                    lat: studySites.map(s => s.lat),
+                    lon: studySites.map(s => s.lon),
+                    text: showLabels ? studySites.map(s => s.name) : [],
+                    textposition: 'top center',
+                    textfont: {
+                        size: 12,
+                        color: '#000',
+                        family: 'Arial, sans-serif'
+                    },
+                    marker: {
+                        size: 10,
+                        color: '#000',
+                        symbol: 'circle',
+                        line: {
+                            color: '#fff',
+                            width: 2
+                        }
+                    },
+                    showlegend: false,
+                    hovertemplate: showLabels ? '%{text}<extra></extra>' : 'Study Site<extra></extra>'
+                });
+            }
+
+            const layout = {
+                title: {
+                    text: title,
+                    font: { size: 16 }
+                },
+                geo: {
+                    scope: 'africa',
+                    showland: true,
+                    landcolor: '#f0f0f0',
+                    showocean: true,
+                    oceancolor: '#e6f2ff',
+                    showcountries: true,
+                    countrycolor: '#999',
+                    showlakes: true,
+                    lakecolor: '#e6f2ff',
+                    projection: {
+                        type: 'mercator'
+                    },
+                    center: {
+                        lat: -20,
+                        lon: 25
+                    },
+                    lonaxis: {
+                        range: [10, 40]
+                    },
+                    lataxis: {
+                        range: [-35, -5]
+                    }
+                },
+                margin: { t: 40, r: 20, b: 20, l: 20 },
+                height: 550
+            };
+
+            const config = {
+                displayModeBar: false,
+                responsive: true
+            };
+
+            Plotly.newPlot(divId, traces, layout, config);
+        }
+
+        // Create all map variations
+        const periods = ['1980-2016', '2041-2070', '2071-2100'];
+        
+        // Version 1: Study Sites Only (no city names)
+        periods.forEach((period, idx) => {
+            createMap(`map${idx + 1}-sites`, period, true, false);
+        });
+
+        // Version 2: Study Sites with City Names
+        periods.forEach((period, idx) => {
+            createMap(`map${idx + 1}-labeled`, period, true, true);
+        });
+
+        // Version 3: Clean (no labels at all)
+        periods.forEach((period, idx) => {
+            createMap(`map${idx + 1}-clean`, period, false, false);
+        });
+    </script>
+</body>
+</html>
