@@ -11,7 +11,9 @@ import os
 # Study sites
 study_sites = [
     {'name': 'Cape Town', 'lat': -33.9249, 'lon': 18.4241},
+    {'name': 'Johannesburg', 'lat': -26.2041, 'lon': 28.0473},
     {'name': 'Mount Darwin', 'lat': -16.7833, 'lon': 31.5833}, 
+    {'name': 'Harare', 'lat': -17.8292, 'lon': 31.0522},
     {'name': 'Blantyre', 'lat': -15.7870, 'lon': 35.0055}
 ]
 
@@ -162,18 +164,9 @@ def create_optimized_scientific_layout(tif_paths, output_path, show_sites=True, 
         font_weight='bold'
     ))
     
-    # Subtitle
-    dwg.add(dwg.text(
-        'Climate Change Projections for CCSA Study Sites',
-        insert=(total_width // 2, 60),
-        text_anchor='middle',
-        font_family='Arial, sans-serif',
-        font_size='16px',
-        fill='#7f8c8d'
-    ))
     
     # Process each time period
-    titles = ['Current Climate\n1991-2020 Baseline', 'Moderate Warming\nSSP1-2.6 2041-2070', 'Extreme Warming\nSSP1-2.6 2071-2099']
+    titles = ['Current Climate\n1991-2020 Baseline', 'Moderate Warming\nSSP1-2.6 2041-2070', 'Extreme Warming\nSSP5-8.5 2071-2099']
     scenario_colors = ['#27ae60', '#f39c12', '#e74c3c']  # Scientific green, orange, red
     
     for i, (tif_path, title, color) in enumerate(zip(tif_paths, titles, scenario_colors)):
@@ -181,7 +174,7 @@ def create_optimized_scientific_layout(tif_paths, output_path, show_sites=True, 
             continue
             
         x_offset = side_margin + i * (map_width + map_spacing)
-        y_offset = top_margin + 40
+        y_offset = top_margin + 20
         
         print(f"Processing {tif_path}...")
         
@@ -380,7 +373,7 @@ def create_optimized_scientific_layout(tif_paths, output_path, show_sites=True, 
                     fill='#555'
                 ))
                 
-                item_y += 25
+                item_y += 20
     
     # Data source and citation (bottom)
     citation_y = total_height - 80
@@ -431,11 +424,11 @@ def main():
     base_dir = "/Users/craig/Library/Mobile Documents/com~apple~CloudDocs/RP2_presentation/presentation_assets/images/koppen_extracted"
     output_dir = "/Users/craig/Library/Mobile Documents/com~apple~CloudDocs/RP2_presentation/presentation_assets/images"
     
-    # File paths for the three time periods
+    # File paths for the three time periods  
     tif_paths = [
         os.path.join(base_dir, '1991_2020', 'koppen_geiger_0p1.tif'),
         os.path.join(base_dir, '2041_2070/ssp126', 'koppen_geiger_0p1.tif'),
-        os.path.join(base_dir, '2071_2099/ssp126', 'koppen_geiger_0p1.tif')
+        os.path.join(base_dir, '2071_2099/ssp585', 'koppen_geiger_0p1.tif')  # Use SSP5-8.5 for extreme scenario
     ]
     
     # Create final versions

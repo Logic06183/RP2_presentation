@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "apiVersion": "v1",
+    "status": "error",
+    "message": [
+      "Number of parameters mismatch. Needed: 11. Given: 9"
+    ],
+    "format": "/api/v1/{collection-code}_{type-code}_{variable-code}_{product-code}_{aggregation-code}_{period-code}_{percentile-code}_{scenario-code}_{model-code}_{model-calculation-code}_{grid-code}_{statistic-code}/{geo_code}"
+  },
+  "data": []
+}

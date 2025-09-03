@@ -1,0 +1,159 @@
+{
+  "temperature_variables": {
+    "tas": {
+      "label": "Average Mean Surface Air Temperature",
+      "unit": "°C",
+      "description": "Average mean temperature over the aggregation period"
+    },
+    "tasmax": {
+      "label": "Average Maximum Surface Air Temperature", 
+      "unit": "°C",
+      "description": "Average daily maximum temperature over the aggregation period"
+    },
+    "tasmin": {
+      "label": "Average Minimum Surface Air Temperature",
+      "unit": "°C",
+      "description": "Average daily minimum temperature over the aggregation period"
+    },
+    "txx": {
+      "label": "Maximum of Daily Max-Temperature",
+      "unit": "°C",
+      "description": "The single-day maximum value of the daily maximum temperatures over the aggregated data period"
+    },
+    "tnn": {
+      "label": "Minimum of Daily Min-Temperature",
+      "unit": "°C",
+      "description": "The single-day minimum value of the daily minimum temperatures over the aggregated data period"
+    }
+  },
+  "precipitation_variables": {
+    "pr": {
+      "label": "Precipitation",
+      "unit": "mm",
+      "description": "Aggregated accumulated precipitation"
+    },
+    "prpercnt": {
+      "label": "Precipitation Percent Change",
+      "unit": "%",
+      "description": "Projected percent change in total precipitation; anomaly only"
+    },
+    "rx1day": {
+      "label": "Average Largest 1-Day Precipitation",
+      "unit": "mm",
+      "description": "The average highest precipitation amount in a 1-day period during each month"
+    },
+    "rx5day": {
+      "label": "Average Largest 5-Day Cumulative Precipitation",
+      "unit": "mm",
+      "description": "The average highest precipitation amount over a consecutive 5-day period"
+    },
+    "r20mm": {
+      "label": "Number of Days with Precipitation >20mm",
+      "unit": "days",
+      "description": "The number of heavy precipitation days during the aggregation period"
+    },
+    "r50mm": {
+      "label": "Number of Days with Precipitation >50mm",
+      "unit": "days",
+      "description": "The number of very heavy precipitation days during the aggregation period"
+    }
+  },
+  "heat_indices": {
+    "hd30": {
+      "label": "Number of Hot Days (T-max > 30°C)",
+      "unit": "days",
+      "description": "Days with daily maximum temperature >= 30°C"
+    },
+    "hd35": {
+      "label": "Number of Hot Days (T-max > 35°C)",
+      "unit": "days",
+      "description": "Days with daily maximum temperature >= 35°C"
+    },
+    "hd40": {
+      "label": "Number of Hot Days (T-max > 40°C)",
+      "unit": "days",
+      "description": "Days with daily maximum temperature >= 40°C"
+    },
+    "hi35": {
+      "label": "Number of Days with Heat Index > 35°C",
+      "unit": "days",
+      "description": "Days where the Heat Index >= 35°C including atmospheric moisture"
+    },
+    "tr": {
+      "label": "Number of Tropical Nights (T-min > 20°C)",
+      "unit": "days",
+      "description": "Days where daily minimum temperature remained >= 20°C"
+    },
+    "tr23": {
+      "label": "Number of Tropical Nights (T-min > 23°C)",
+      "unit": "days",
+      "description": "Days where daily minimum temperature remained >= 23°C"
+    }
+  },
+  "drought_indices": {
+    "spei12": {
+      "label": "Annual SPEI Drought Index",
+      "unit": "spei index",
+      "description": "Standardized Precipitation Evapotranspiration Index - integrated water deficit measure"
+    },
+    "cdd": {
+      "label": "Max Number of Consecutive Dry Days",
+      "unit": "days",
+      "description": "Maximum length of dry spell (precipitation < 1mm)"
+    },
+    "cwd": {
+      "label": "Max Number of Consecutive Wet Days",
+      "unit": "days",
+      "description": "Maximum length of wet spell (precipitation ≥ 1mm)"
+    }
+  },
+  "extreme_events": {
+    "wsdi": {
+      "label": "Warm Spell Duration Index",
+      "unit": "days",
+      "description": "Days in sequences of at least 6 consecutive days with max temp > 90th percentile"
+    },
+    "csdi": {
+      "label": "Cold Spell Duration Index",
+      "unit": "days",
+      "description": "Days in sequences of at least 6 consecutive days with min temp < 10th percentile"
+    },
+    "fd": {
+      "label": "Number of Frost Days",
+      "unit": "days",
+      "description": "Days where daily minimum temperature is < 0°C"
+    },
+    "id": {
+      "label": "Number of Ice Days",
+      "unit": "days",
+      "description": "Days where daily maximum temperature is < 0°C"
+    }
+  },
+  "vulnerability_indicators": {
+    "popcount": {
+      "label": "Population Count",
+      "unit": "population",
+      "description": "Total population count"
+    },
+    "popdensity": {
+      "label": "Population Density",
+      "unit": "population_density",
+      "description": "Population per unit area"
+    },
+    "pov190": {
+      "label": "Percentage of Population below $1.90/day",
+      "unit": "% of population",
+      "description": "Extreme poverty indicator"
+    },
+    "pov320": {
+      "label": "Percentage of Population below $3.20/day",
+      "unit": "% of population",
+      "description": "Lower-middle income poverty indicator"
+    },
+    "hdtrpopdensitycat": {
+      "label": "Temperature-Based Heat + Population Risk",
+      "unit": "risk factor",
+      "description": "Combined heat and population density risk categorization (0-4 scale)"
+    }
+  }
+}

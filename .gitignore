@@ -1,0 +1,56 @@
+# Mac system files
+.DS_Store
+*.swp
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+.pytest_cache/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Large data files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Large climate data files
+*.nc
+*.grib
+*.grib2
+*.tif
+*.geotiff
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# IDE files
+.vscode/
+.idea/
+
+# API test outputs
+test_api_response.json
+
+# Large directories (uncomment if needed)
+# presentation_assets/images/koppen_extracted/
+# presentation_assets/images/high_res_koppen/
