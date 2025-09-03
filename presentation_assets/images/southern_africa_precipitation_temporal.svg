@@ -1,0 +1,299 @@
+<svg width="1400" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="600" fill="#f8f9fa"/>
+  
+  <!-- Main Title -->
+  <text x="700" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Precipitation Change Evolution: Southern Africa 1991-2050
+  </text>
+  <text x="700" y="55" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#5a6c7d">
+    Progressive drying trends across the region, with emphasis on target countries
+  </text>
+  
+  <!-- Three time periods side by side -->
+
+  <!-- Baseline Change Map -->
+  <g transform="translate(80, 90)">
+    <!-- Map title -->
+    <text x="170" y="0" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#8c510a">
+      Baseline Change
+    </text>
+    <text x="170" y="20" font-family="Arial" font-size="14" text-anchor="middle" fill="#5a6c7d">
+      1991-2020
+    </text>
+    
+    <!-- Map container -->
+    <rect x="0" y="30" width="340" height="350" fill="white" stroke="#cccccc" stroke-width="1"/>
+    
+    <!-- Country shapes with precipitation colors -->
+
+    <path d="M 42.56000000000004 87.71428571428571 L 52.8 219.37142857142857 L 205.11999999999998 211.14285714285714 L 116.8 69.42857142857143 L 42.56000000000004 87.71428571428571 Z" fill="#f5f5f5" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="176.4" y="118.2" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      SOU
+    </text>
+    <text x="176.4" y="133.2" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -8%
+    </text>
+
+    <path d="M 201.28 148.97142857142856 L 201.28 221.20000000000002 L 288.31999999999994 221.20000000000002 L 288.31999999999994 148.97142857142856 L 201.28 148.97142857142856 Z" fill="#f6e8c3" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="184.62857142857143" y="239.8" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      ZIM
+    </text>
+    <text x="184.62857142857143" y="254.8" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -12%
+    </text>
+
+    <path d="M 269.12 217.54285714285717 L 269.12 246.8 L 367.68 246.8 L 367.68 217.54285714285717 L 269.12 217.54285714285717 Z" fill="#f5f5f5" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="232.17142857142852" y="313.4" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      MAL
+    </text>
+    <text x="232.17142857142852" y="328.4" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -7%
+    </text>
+
+    <path d="M 143.68 100.5142857142857 L 143.68 187.37142857142857 L 260.15999999999997 187.37142857142857 L 260.15999999999997 100.5142857142857 L 143.68 100.5142857142857 Z" fill="#dfc27d" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="143.4857142857143" y="197.56" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c3e50">
+      BOT
+    </text>
+    <text x="143.4857142857143" y="212.56" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -15%
+    </text>
+
+    <path d="M 118.08000000000001 25.542857142857137 L 118.08000000000001 149.8857142857143 L 267.84000000000003 149.8857142857143 L 267.84000000000003 25.542857142857137 L 118.08000000000001 25.542857142857137 Z" fill="#dfc27d" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="87.71428571428571" y="188.6" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c3e50">
+      NAM
+    </text>
+    <text x="87.71428571428571" y="203.6" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -18%
+    </text>
+
+    <path d="M 256.32 118.79999999999998 L 256.32 226.6857142857143 L 383.04 226.6857142857143 L 383.04 118.79999999999998 L 256.32 118.79999999999998 Z" fill="#f5f5f5" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="172.74285714285713" y="315.31999999999994" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c3e50">
+      ZAM
+    </text>
+    <text x="172.74285714285713" y="330.31999999999994" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -9%
+    </text>
+
+    <path d="M 143.68 194.68571428571425 L 143.68 291.59999999999997 L 353.6 291.59999999999997 L 353.6 194.68571428571425 L 143.68 194.68571428571425 Z" fill="#f5f5f5" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="243.14285714285714" y="243.64000000000001" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c3e50">
+      MOZ
+    </text>
+    <text x="243.14285714285714" y="258.64" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -6%
+    </text>
+
+  </g>
+
+  <!-- Accelerated Drying Map -->
+  <g transform="translate(480, 90)">
+    <!-- Map title -->
+    <text x="170" y="0" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#8c510a">
+      Accelerated Drying
+    </text>
+    <text x="170" y="20" font-family="Arial" font-size="14" text-anchor="middle" fill="#5a6c7d">
+      2021-2040
+    </text>
+    
+    <!-- Map container -->
+    <rect x="0" y="30" width="340" height="350" fill="white" stroke="#cccccc" stroke-width="1"/>
+    
+    <!-- Country shapes with precipitation colors -->
+
+    <path d="M 42.56000000000004 87.71428571428571 L 52.8 219.37142857142857 L 205.11999999999998 211.14285714285714 L 116.8 69.42857142857143 L 42.56000000000004 87.71428571428571 Z" fill="#dfc27d" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="176.4" y="118.2" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      SOU
+    </text>
+    <text x="176.4" y="133.2" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -15%
+    </text>
+
+    <path d="M 201.28 148.97142857142856 L 201.28 221.20000000000002 L 288.31999999999994 221.20000000000002 L 288.31999999999994 148.97142857142856 L 201.28 148.97142857142856 Z" fill="#dfc27d" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="184.62857142857143" y="239.8" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      ZIM
+    </text>
+    <text x="184.62857142857143" y="254.8" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -18%
+    </text>
+
+    <path d="M 269.12 217.54285714285717 L 269.12 246.8 L 367.68 246.8 L 367.68 217.54285714285717 L 269.12 217.54285714285717 Z" fill="#f6e8c3" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="232.17142857142852" y="313.4" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      MAL
+    </text>
+    <text x="232.17142857142852" y="328.4" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -12%
+    </text>
+
+    <path d="M 143.68 100.5142857142857 L 143.68 187.37142857142857 L 260.15999999999997 187.37142857142857 L 260.15999999999997 100.5142857142857 L 143.68 100.5142857142857 Z" fill="#bf812d" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="143.4857142857143" y="197.56" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="white">
+      BOT
+    </text>
+    <text x="143.4857142857143" y="212.56" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+      -22%
+    </text>
+
+    <path d="M 118.08000000000001 25.542857142857137 L 118.08000000000001 149.8857142857143 L 267.84000000000003 149.8857142857143 L 267.84000000000003 25.542857142857137 L 118.08000000000001 25.542857142857137 Z" fill="#8c510a" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="87.71428571428571" y="188.6" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="white">
+      NAM
+    </text>
+    <text x="87.71428571428571" y="203.6" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+      -25%
+    </text>
+
+    <path d="M 256.32 118.79999999999998 L 256.32 226.6857142857143 L 383.04 226.6857142857143 L 383.04 118.79999999999998 L 256.32 118.79999999999998 Z" fill="#dfc27d" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="172.74285714285713" y="315.31999999999994" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c3e50">
+      ZAM
+    </text>
+    <text x="172.74285714285713" y="330.31999999999994" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -15%
+    </text>
+
+    <path d="M 143.68 194.68571428571425 L 143.68 291.59999999999997 L 353.6 291.59999999999997 L 353.6 194.68571428571425 L 143.68 194.68571428571425 Z" fill="#f6e8c3" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="243.14285714285714" y="243.64000000000001" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c3e50">
+      MOZ
+    </text>
+    <text x="243.14285714285714" y="258.64" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -11%
+    </text>
+
+  </g>
+
+  <!-- Severe Decline Map -->
+  <g transform="translate(880, 90)">
+    <!-- Map title -->
+    <text x="170" y="0" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#8c510a">
+      Severe Decline
+    </text>
+    <text x="170" y="20" font-family="Arial" font-size="14" text-anchor="middle" fill="#5a6c7d">
+      2041-2060
+    </text>
+    
+    <!-- Map container -->
+    <rect x="0" y="30" width="340" height="350" fill="white" stroke="#cccccc" stroke-width="1"/>
+    
+    <!-- Country shapes with precipitation colors -->
+
+    <path d="M 42.56000000000004 87.71428571428571 L 52.8 219.37142857142857 L 205.11999999999998 211.14285714285714 L 116.8 69.42857142857143 L 42.56000000000004 87.71428571428571 Z" fill="#bf812d" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="176.4" y="118.2" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      SOU
+    </text>
+    <text x="176.4" y="133.2" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+      -22%
+    </text>
+
+    <path d="M 201.28 148.97142857142856 L 201.28 221.20000000000002 L 288.31999999999994 221.20000000000002 L 288.31999999999994 148.97142857142856 L 201.28 148.97142857142856 Z" fill="#8c510a" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="184.62857142857143" y="239.8" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      ZIM
+    </text>
+    <text x="184.62857142857143" y="254.8" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+      -28%
+    </text>
+
+    <path d="M 269.12 217.54285714285717 L 269.12 246.8 L 367.68 246.8 L 367.68 217.54285714285717 L 269.12 217.54285714285717 Z" fill="#bf812d" stroke="#2c3e50" stroke-width="3" opacity="0.85"/>
+
+    <text x="232.17142857142852" y="313.4" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      MAL
+    </text>
+    <text x="232.17142857142852" y="328.4" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -20%
+    </text>
+
+    <path d="M 143.68 100.5142857142857 L 143.68 187.37142857142857 L 260.15999999999997 187.37142857142857 L 260.15999999999997 100.5142857142857 L 143.68 100.5142857142857 Z" fill="#543005" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="143.4857142857143" y="197.56" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="white">
+      BOT
+    </text>
+    <text x="143.4857142857143" y="212.56" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+      -32%
+    </text>
+
+    <path d="M 118.08000000000001 25.542857142857137 L 118.08000000000001 149.8857142857143 L 267.84000000000003 149.8857142857143 L 267.84000000000003 25.542857142857137 L 118.08000000000001 25.542857142857137 Z" fill="#543005" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="87.71428571428571" y="188.6" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="white">
+      NAM
+    </text>
+    <text x="87.71428571428571" y="203.6" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+      -35%
+    </text>
+
+    <path d="M 256.32 118.79999999999998 L 256.32 226.6857142857143 L 383.04 226.6857142857143 L 383.04 118.79999999999998 L 256.32 118.79999999999998 Z" fill="#bf812d" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="172.74285714285713" y="315.31999999999994" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="white">
+      ZAM
+    </text>
+    <text x="172.74285714285713" y="330.31999999999994" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+      -24%
+    </text>
+
+    <path d="M 143.68 194.68571428571425 L 143.68 291.59999999999997 L 353.6 291.59999999999997 L 353.6 194.68571428571425 L 143.68 194.68571428571425 Z" fill="#dfc27d" stroke="#888888" stroke-width="1" opacity="0.85"/>
+
+    <text x="243.14285714285714" y="243.64000000000001" font-family="Arial" font-size="12" font-weight="normal" text-anchor="middle" fill="#2c3e50">
+      MOZ
+    </text>
+    <text x="243.14285714285714" y="258.64" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      -18%
+    </text>
+
+  </g>
+
+  <!-- Precipitation Legend -->
+  <g transform="translate(1050, 450)">
+    <text x="0" y="-10" font-family="Arial" font-size="14" font-weight="bold" fill="#2c3e50">Precipitation Change</text>
+    
+    <rect x="0" y="0" width="30" height="15" fill="#543005"/>
+    <text x="35" y="12" font-family="Arial" font-size="11" fill="#2c3e50">≤-30%</text>
+    
+    <rect x="0" y="20" width="30" height="15" fill="#8c510a"/>
+    <text x="35" y="32" font-family="Arial" font-size="11" fill="#2c3e50">-25 to -30%</text>
+    
+    <rect x="0" y="40" width="30" height="15" fill="#bf812d"/>
+    <text x="35" y="52" font-family="Arial" font-size="11" fill="#2c3e50">-20 to -25%</text>
+    
+    <rect x="0" y="60" width="30" height="15" fill="#dfc27d"/>
+    <text x="35" y="72" font-family="Arial" font-size="11" fill="#2c3e50">-15 to -20%</text>
+    
+    <rect x="0" y="80" width="30" height="15" fill="#f6e8c3"/>
+    <text x="35" y="92" font-family="Arial" font-size="11" fill="#2c3e50">-10 to -15%</text>
+    
+    <rect x="0" y="100" width="30" height="15" fill="#f5f5f5"/>
+    <text x="35" y="112" font-family="Arial" font-size="11" fill="#2c3e50">-5 to -10%</text>
+  </g>
+  
+  <!-- Key insights -->
+  <g transform="translate(50, 470)">
+    <rect x="0" y="0" width="950" height="100" fill="#fef0d9" stroke="#8c510a" stroke-width="2" rx="5"/>
+    <text x="475" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#8c510a">
+      Precipitation Decline Patterns
+    </text>
+    <text x="25" y="50" font-family="Arial" font-size="13" fill="#2c3e50">
+      • <tspan font-weight="bold">Progressive drying</tspan> across all target countries: Malawi (-7% → -20%), S.Africa (-8% → -22%), Zimbabwe (-12% → -28%)
+    </text>
+    <text x="25" y="72" font-family="Arial" font-size="13" fill="#2c3e50">
+      • Southwest region (Namibia, Botswana) faces most severe declines: up to -35% by 2050
+    </text>
+    <text x="25" y="94" font-family="Arial" font-size="13" fill="#2c3e50">
+      • Eastern coastal areas (Mozambique) showing more resilience due to Indian Ocean influence
+    </text>
+  </g>
+  
+  <!-- Data attribution -->
+  <text x="700" y="595" font-family="Arial" font-size="10" text-anchor="middle" fill="#999999">
+    Data: CMIP6 Precipitation Projections, CORDEX-Africa, SADC Climate Assessment
+  </text>
+</svg>

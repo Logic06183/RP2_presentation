@@ -1,0 +1,237 @@
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="700" y="35" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Southern Africa Integrated Climate Risk Assessment
+  </text>
+  <text x="700" y="60" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#5a6c7d">
+    Combining temperature rise, precipitation decline, and socioeconomic vulnerability
+  </text>
+  
+  <!-- Main Risk Matrix -->
+  <g transform="translate(100, 100)">
+    <!-- Matrix background -->
+    <rect x="0" y="0" width="800" height="500" fill="white" stroke="#333333" stroke-width="2"/>
+    
+    <!-- Grid -->
+    <line x1="0" y1="125" x2="800" y2="125" stroke="#cccccc" stroke-width="1"/>
+    <line x1="0" y1="250" x2="800" y2="250" stroke="#cccccc" stroke-width="1"/>
+    <line x1="0" y1="375" x2="800" y2="375" stroke="#cccccc" stroke-width="1"/>
+    
+    <line x1="200" y1="0" x2="200" y2="500" stroke="#cccccc" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="500" stroke="#cccccc" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke="#cccccc" stroke-width="1"/>
+    
+    <!-- Risk zones coloring -->
+    <rect x="0" y="0" width="200" height="125" fill="#fee090" fill-opacity="0.3"/>
+    <rect x="200" y="0" width="200" height="125" fill="#fdae61" fill-opacity="0.3"/>
+    <rect x="400" y="0" width="200" height="125" fill="#f46d43" fill-opacity="0.3"/>
+    <rect x="600" y="0" width="200" height="125" fill="#d73027" fill-opacity="0.3"/>
+    
+    <rect x="0" y="125" width="200" height="125" fill="#e0f3f8" fill-opacity="0.3"/>
+    <rect x="200" y="125" width="200" height="125" fill="#fee090" fill-opacity="0.3"/>
+    <rect x="400" y="125" width="200" height="125" fill="#fdae61" fill-opacity="0.3"/>
+    <rect x="600" y="125" width="200" height="125" fill="#f46d43" fill-opacity="0.3"/>
+    
+    <rect x="0" y="250" width="200" height="125" fill="#abd9e9" fill-opacity="0.3"/>
+    <rect x="200" y="250" width="200" height="125" fill="#e0f3f8" fill-opacity="0.3"/>
+    <rect x="400" y="250" width="200" height="125" fill="#fee090" fill-opacity="0.3"/>
+    <rect x="600" y="250" width="200" height="125" fill="#fdae61" fill-opacity="0.3"/>
+    
+    <rect x="0" y="375" width="200" height="125" fill="#74add1" fill-opacity="0.3"/>
+    <rect x="200" y="375" width="200" height="125" fill="#abd9e9" fill-opacity="0.3"/>
+    <rect x="400" y="375" width="200" height="125" fill="#e0f3f8" fill-opacity="0.3"/>
+    <rect x="600" y="375" width="200" height="125" fill="#fee090" fill-opacity="0.3"/>
+    
+    <!-- Country positions based on combined risk -->
+    <!-- Mozambique - Extreme Risk -->
+    <g transform="translate(680, 60)">
+      <circle r="30" fill="#8b0000" fill-opacity="0.8" stroke="#4d0000" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">MOZ</text>
+    </g>
+    
+    <!-- Madagascar - Very High Risk -->
+    <g transform="translate(520, 80)">
+      <circle r="28" fill="#d73027" fill-opacity="0.8" stroke="#8b0000" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">MDG</text>
+    </g>
+    
+    <!-- Zimbabwe - High Risk -->
+    <g transform="translate(480, 180)">
+      <circle r="26" fill="#f46d43" fill-opacity="0.8" stroke="#d73027" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">ZWE</text>
+    </g>
+    
+    <!-- Malawi - High Risk -->
+    <g transform="translate(520, 210)">
+      <circle r="26" fill="#f46d43" fill-opacity="0.8" stroke="#d73027" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">MWI</text>
+    </g>
+    
+    <!-- Zambia - Moderate-High Risk -->
+    <g transform="translate(380, 180)">
+      <circle r="25" fill="#fdae61" fill-opacity="0.8" stroke="#f46d43" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">ZMB</text>
+    </g>
+    
+    <!-- Angola - Moderate-High Risk -->
+    <g transform="translate(320, 150)">
+      <circle r="25" fill="#fdae61" fill-opacity="0.8" stroke="#f46d43" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">AGO</text>
+    </g>
+    
+    <!-- Lesotho - Moderate Risk -->
+    <g transform="translate(420, 280)">
+      <circle r="24" fill="#fee090" fill-opacity="0.8" stroke="#fdae61" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">LSO</text>
+    </g>
+    
+    <!-- Eswatini - Moderate Risk -->
+    <g transform="translate(380, 310)">
+      <circle r="23" fill="#fee090" fill-opacity="0.8" stroke="#fdae61" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">SWZ</text>
+    </g>
+    
+    <!-- Namibia - Moderate Risk (high climate stress, lower vulnerability) -->
+    <g transform="translate(480, 340)">
+      <circle r="24" fill="#fee090" fill-opacity="0.8" stroke="#fdae61" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">NAM</text>
+    </g>
+    
+    <!-- Botswana - Lower-Moderate Risk -->
+    <g transform="translate(280, 360)">
+      <circle r="23" fill="#e0f3f8" fill-opacity="0.8" stroke="#abd9e9" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">BWA</text>
+    </g>
+    
+    <!-- South Africa - Lower Risk (relative) -->
+    <g transform="translate(220, 400)">
+      <circle r="22" fill="#abd9e9" fill-opacity="0.8" stroke="#74add1" stroke-width="2"/>
+      <text y="5" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">ZAF</text>
+    </g>
+    
+    <!-- Axis labels -->
+    <text x="400" y="540" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Climate Stress (Temperature + Precipitation Change) →
+    </text>
+    <text x="-250" y="-40" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50" transform="rotate(-90)">
+      Socioeconomic Vulnerability →
+    </text>
+    
+    <!-- Risk level labels -->
+    <text x="100" y="-15" font-family="Arial" font-size="12" text-anchor="middle" fill="#74add1">Low Climate Stress</text>
+    <text x="300" y="-15" font-family="Arial" font-size="12" text-anchor="middle" fill="#fee090">Moderate Stress</text>
+    <text x="500" y="-15" font-family="Arial" font-size="12" text-anchor="middle" fill="#f46d43">High Stress</text>
+    <text x="700" y="-15" font-family="Arial" font-size="12" text-anchor="middle" fill="#d73027">Extreme Stress</text>
+    
+    <text x="-20" y="62" font-family="Arial" font-size="12" text-anchor="end" fill="#d73027">Very High Vuln.</text>
+    <text x="-20" y="187" font-family="Arial" font-size="12" text-anchor="end" fill="#f46d43">High Vuln.</text>
+    <text x="-20" y="312" font-family="Arial" font-size="12" text-anchor="end" fill="#fee090">Moderate Vuln.</text>
+    <text x="-20" y="437" font-family="Arial" font-size="12" text-anchor="end" fill="#74add1">Lower Vuln.</text>
+  </g>
+  
+  <!-- Risk Factors Panel -->
+  <g transform="translate(950, 120)">
+    <rect x="0" y="0" width="350" height="480" fill="white" stroke="#cccccc" stroke-width="1" rx="5"/>
+    
+    <text x="175" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Compound Risk Factors
+    </text>
+    
+    <!-- Temperature -->
+    <g transform="translate(20, 60)">
+      <rect x="0" y="0" width="310" height="100" fill="#fff7ec" stroke="#d73027" stroke-width="1" rx="3"/>
+      <text x="10" y="20" font-family="Arial" font-size="14" font-weight="bold" fill="#d73027">Temperature Rise</text>
+      <text x="10" y="40" font-family="Arial" font-size="12" fill="#2c3e50">• Current: +0.9 to +1.6°C</text>
+      <text x="10" y="58" font-family="Arial" font-size="12" fill="#2c3e50">• 2050: Additional +1.2-1.8°C</text>
+      <text x="10" y="76" font-family="Arial" font-size="12" fill="#2c3e50">• Hotspots: Interior regions</text>
+      <text x="10" y="94" font-family="Arial" font-size="11" fill="#5a6c7d">→ Heat stress, crop failure risk</text>
+    </g>
+    
+    <!-- Precipitation -->
+    <g transform="translate(20, 175)">
+      <rect x="0" y="0" width="310" height="100" fill="#fef0d9" stroke="#8c510a" stroke-width="1" rx="3"/>
+      <text x="10" y="20" font-family="Arial" font-size="14" font-weight="bold" fill="#8c510a">Precipitation Decline</text>
+      <text x="10" y="40" font-family="Arial" font-size="12" fill="#2c3e50">• Annual: -3% to -15%</text>
+      <text x="10" y="58" font-family="Arial" font-size="12" fill="#2c3e50">• Wet season: -5% to -18%</text>
+      <text x="10" y="76" font-family="Arial" font-size="12" fill="#2c3e50">• Southwest most affected</text>
+      <text x="10" y="94" font-family="Arial" font-size="11" fill="#5a6c7d">→ Water stress, drought risk</text>
+    </g>
+    
+    <!-- Vulnerability -->
+    <g transform="translate(20, 290)">
+      <rect x="0" y="0" width="310" height="100" fill="#f0f9ff" stroke="#4575b4" stroke-width="1" rx="3"/>
+      <text x="10" y="20" font-family="Arial" font-size="14" font-weight="bold" fill="#4575b4">Vulnerability Drivers</text>
+      <text x="10" y="40" font-family="Arial" font-size="12" fill="#2c3e50">• Food security challenges</text>
+      <text x="10" y="58" font-family="Arial" font-size="12" fill="#2c3e50">• Water resource stress</text>
+      <text x="10" y="76" font-family="Arial" font-size="12" fill="#2c3e50">• Limited adaptive capacity</text>
+      <text x="10" y="94" font-family="Arial" font-size="11" fill="#5a6c7d">→ Amplifies climate impacts</text>
+    </g>
+    
+    <!-- Priority Actions -->
+    <text x="175" y="420" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Priority Adaptation Needs
+    </text>
+    <text x="20" y="445" font-family="Arial" font-size="12" fill="#d73027">• Extreme Risk: MOZ, MDG</text>
+    <text x="30" y="462" font-family="Arial" font-size="11" fill="#5a6c7d">Coastal protection, early warning</text>
+    <text x="20" y="482" font-family="Arial" font-size="12" fill="#f46d43">• High Risk: ZWE, MWI, ZMB</text>
+    <text x="30" y="499" font-family="Arial" font-size="11" fill="#5a6c7d">Agriculture adaptation, water mgmt</text>
+    <text x="20" y="519" font-family="Arial" font-size="12" fill="#fdae61">• Moderate: NAM, LSO, SWZ</text>
+    <text x="30" y="536" font-family="Arial" font-size="11" fill="#5a6c7d">Drought resilience, infrastructure</text>
+  </g>
+  
+  <!-- Temporal Projection -->
+  <g transform="translate(100, 650)">
+    <rect x="0" y="0" width="1200" height="180" fill="white" stroke="#333333" stroke-width="2" rx="5"/>
+    
+    <text x="600" y="30" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Risk Evolution Timeline
+    </text>
+    
+    <!-- Timeline axis -->
+    <line x1="100" y1="100" x2="1100" y2="100" stroke="#333333" stroke-width="2"/>
+    
+    <!-- Time markers -->
+    <line x1="100" y1="95" x2="100" y2="105" stroke="#333333" stroke-width="2"/>
+    <text x="100" y="125" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2020</text>
+    
+    <line x1="350" y1="95" x2="350" y2="105" stroke="#333333" stroke-width="2"/>
+    <text x="350" y="125" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2030</text>
+    
+    <line x1="600" y1="95" x2="600" y2="105" stroke="#333333" stroke-width="2"/>
+    <text x="600" y="125" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2040</text>
+    
+    <line x1="850" y1="95" x2="850" y2="105" stroke="#333333" stroke-width="2"/>
+    <text x="850" y="125" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2050</text>
+    
+    <line x1="1100" y1="95" x2="1100" y2="105" stroke="#333333" stroke-width="2"/>
+    <text x="1100" y="125" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2060</text>
+    
+    <!-- Risk progression curves -->
+    <path d="M 100 90 Q 350 85, 600 75 T 1100 50" 
+          fill="none" stroke="#d73027" stroke-width="3" opacity="0.7"/>
+    <text x="1120" y="55" font-family="Arial" font-size="11" fill="#d73027">Temperature</text>
+    
+    <path d="M 100 95 Q 350 92, 600 88 T 1100 75" 
+          fill="none" stroke="#8c510a" stroke-width="3" opacity="0.7"/>
+    <text x="1120" y="80" font-family="Arial" font-size="11" fill="#8c510a">Drought</text>
+    
+    <path d="M 100 85 Q 350 80, 600 70 T 1100 45" 
+          fill="none" stroke="#4575b4" stroke-width="3" opacity="0.7"/>
+    <text x="1120" y="50" font-family="Arial" font-size="11" fill="#4575b4">Overall Risk</text>
+    
+    <!-- Key thresholds -->
+    <line x1="400" y1="40" x2="400" y2="100" stroke="#ff0000" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    <text x="400" y="35" font-family="Arial" font-size="10" text-anchor="middle" fill="#ff0000">+1.5°C</text>
+    
+    <line x1="750" y1="40" x2="750" y2="100" stroke="#ff0000" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+    <text x="750" y="35" font-family="Arial" font-size="10" text-anchor="middle" fill="#ff0000">+2.0°C</text>
+  </g>
+  
+  <!-- Data attribution -->
+  <text x="700" y="870" font-family="Arial" font-size="10" text-anchor="middle" fill="#999999">
+    Data Sources: IPCC AR6, World Bank Climate Portal, ND-GAIN Index 2023, SADC Climate Assessment
+  </text>
+</svg>

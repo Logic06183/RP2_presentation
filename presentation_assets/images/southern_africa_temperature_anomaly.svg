@@ -1,0 +1,222 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title and Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Southern Africa Temperature Anomaly (°C above 1961-1990 baseline)
+  </text>
+  <text x="600" y="65" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#5a6c7d">
+    Observed warming 1991-2020 with projected increase by 2050 (SSP2-4.5)
+  </text>
+  
+  <!-- Map Container -->
+  <g transform="translate(100, 100)">
+    <!-- Simplified country shapes with temperature gradient fills -->
+    
+    <!-- South Africa -->
+    <g>
+      <path d="M 400 400 L 550 380 L 600 420 L 580 480 L 500 500 L 400 480 Z" 
+            fill="url(#tempGradientZAF)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="500" y="450" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        South Africa
+      </text>
+      <text x="500" y="470" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#d73027">
+        +1.4°C
+      </text>
+    </g>
+    
+    <!-- Namibia -->
+    <g>
+      <path d="M 250 300 L 350 280 L 380 400 L 300 420 L 250 380 Z" 
+            fill="url(#tempGradientNAM)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="315" y="350" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Namibia
+      </text>
+      <text x="315" y="370" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#a50026">
+        +1.6°C
+      </text>
+    </g>
+    
+    <!-- Botswana -->
+    <g>
+      <path d="M 380 300 L 480 290 L 500 380 L 400 400 L 380 350 Z" 
+            fill="url(#tempGradientBWA)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="440" y="340" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Botswana
+      </text>
+      <text x="440" y="360" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#d73027">
+        +1.4°C
+      </text>
+    </g>
+    
+    <!-- Zimbabwe -->
+    <g>
+      <path d="M 500 280 L 580 270 L 600 340 L 520 360 L 500 320 Z" 
+            fill="url(#tempGradientZWE)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="550" y="310" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Zimbabwe
+      </text>
+      <text x="550" y="330" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#f46d43">
+        +1.2°C
+      </text>
+    </g>
+    
+    <!-- Mozambique -->
+    <g>
+      <path d="M 600 270 L 680 250 L 700 450 L 620 470 L 600 420 Z" 
+            fill="url(#tempGradientMOZ)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="650" y="360" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Mozambique
+      </text>
+      <text x="650" y="380" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#fdae61">
+        +1.0°C
+      </text>
+    </g>
+    
+    <!-- Zambia -->
+    <g>
+      <path d="M 480 200 L 580 190 L 600 270 L 500 280 L 480 240 Z" 
+            fill="url(#tempGradientZMB)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="540" y="235" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Zambia
+      </text>
+      <text x="540" y="255" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#f46d43">
+        +1.3°C
+      </text>
+    </g>
+    
+    <!-- Angola -->
+    <g>
+      <path d="M 300 100 L 480 80 L 500 200 L 380 220 L 300 180 Z" 
+            fill="url(#tempGradientAGO)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="400" y="150" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Angola
+      </text>
+      <text x="400" y="170" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#f46d43">
+        +1.2°C
+      </text>
+    </g>
+    
+    <!-- Malawi -->
+    <g>
+      <path d="M 620 240 L 650 230 L 660 340 L 630 350 L 620 300 Z" 
+            fill="url(#tempGradientMWI)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="640" y="285" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Malawi
+      </text>
+      <text x="640" y="305" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#fdae61">
+        +1.1°C
+      </text>
+    </g>
+    
+    <!-- Madagascar -->
+    <g>
+      <path d="M 780 250 L 820 240 L 840 450 L 800 460 L 780 350 Z" 
+            fill="url(#tempGradientMDG)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="810" y="350" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Madagascar
+      </text>
+      <text x="810" y="370" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#fee090">
+        +0.9°C
+      </text>
+    </g>
+    
+    <!-- Lesotho (small, within South Africa) -->
+    <g>
+      <circle cx="520" cy="460" r="25" fill="url(#tempGradientLSO)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="520" y="465" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        LSO +1.5°C
+      </text>
+    </g>
+    
+    <!-- Eswatini (small, within South Africa) -->
+    <g>
+      <circle cx="570" cy="440" r="20" fill="url(#tempGradientSWZ)" stroke="#2c3e50" stroke-width="2" opacity="0.9"/>
+      <text x="570" y="445" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        SWZ +1.3°C
+      </text>
+    </g>
+  </g>
+  
+  <!-- Temperature Scale Legend -->
+  <g transform="translate(950, 300)">
+    <text x="0" y="-10" font-family="Arial" font-size="14" font-weight="bold" fill="#2c3e50">Temperature Anomaly</text>
+    <rect x="0" y="0" width="40" height="20" fill="#a50026"/>
+    <text x="50" y="15" font-family="Arial" font-size="12" fill="#2c3e50">&gt;1.5°C</text>
+    
+    <rect x="0" y="25" width="40" height="20" fill="#d73027"/>
+    <text x="50" y="40" font-family="Arial" font-size="12" fill="#2c3e50">1.3-1.5°C</text>
+    
+    <rect x="0" y="50" width="40" height="20" fill="#f46d43"/>
+    <text x="50" y="65" font-family="Arial" font-size="12" fill="#2c3e50">1.1-1.3°C</text>
+    
+    <rect x="0" y="75" width="40" height="20" fill="#fdae61"/>
+    <text x="50" y="90" font-family="Arial" font-size="12" fill="#2c3e50">0.9-1.1°C</text>
+    
+    <rect x="0" y="100" width="40" height="20" fill="#fee090"/>
+    <text x="50" y="115" font-family="Arial" font-size="12" fill="#2c3e50">&lt;0.9°C</text>
+  </g>
+  
+  <!-- Projected 2050 Warming -->
+  <g transform="translate(100, 650)">
+    <rect x="0" y="0" width="900" height="80" fill="#fff7ec" stroke="#d73027" stroke-width="2" rx="5"/>
+    <text x="450" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#d73027">
+      Projected Additional Warming by 2050 (SSP2-4.5)
+    </text>
+    <text x="450" y="50" font-family="Arial" font-size="14" text-anchor="middle" fill="#2c3e50">
+      Expected additional +1.2-1.8°C across the region, with interior areas warming faster
+    </text>
+    <text x="450" y="70" font-family="Arial" font-size="12" text-anchor="middle" fill="#5a6c7d">
+      Total warming from pre-industrial: 2.5-3.5°C by mid-century
+    </text>
+  </g>
+  
+  <!-- Gradient Definitions -->
+  <defs>
+    <linearGradient id="tempGradientZAF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d73027;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f46d43;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientNAM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a50026;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d73027;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientBWA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d73027;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f46d43;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientZWE" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f46d43;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#fdae61;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientMOZ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdae61;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#fee090;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientZMB" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f46d43;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#fdae61;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientAGO" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f46d43;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#fdae61;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientMWI" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdae61;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#fee090;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientMDG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fee090;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f7f7f7;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientLSO" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a50026;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d73027;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="tempGradientSWZ" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d73027;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f46d43;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+</svg>

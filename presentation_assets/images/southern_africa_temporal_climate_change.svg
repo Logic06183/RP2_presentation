@@ -1,0 +1,179 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+    Southern Africa Climate Change Trajectory 1960-2100
+  </text>
+  <text x="600" y="60" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#5a6c7d">
+    Historical observations and future projections under different scenarios
+  </text>
+  
+  <!-- Main chart area -->
+  <g transform="translate(100, 100)">
+    <!-- Chart background -->
+    <rect x="0" y="0" width="900" height="400" fill="white" stroke="#333333" stroke-width="2"/>
+    
+    <!-- Grid lines -->
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <line x1="150" y1="0" x2="150" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="300" y1="0" x2="300" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="450" y1="0" x2="450" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="600" y1="0" x2="600" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    <line x1="750" y1="0" x2="750" y2="400" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <!-- Historical period background -->
+    <rect x="0" y="0" width="450" height="400" fill="#f0f0f0" fill-opacity="0.3"/>
+    <text x="225" y="20" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#666666">
+      OBSERVED
+    </text>
+    
+    <!-- Future period background -->
+    <rect x="450" y="0" width="450" height="400" fill="#fff7ec" fill-opacity="0.3"/>
+    <text x="675" y="20" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#d73027">
+      PROJECTED
+    </text>
+    
+    <!-- Temperature trends -->
+    <!-- Historical observed -->
+    <path d="M 0 350 L 150 340 L 300 320 L 450 280" 
+          fill="none" stroke="#333333" stroke-width="3"/>
+    
+    <!-- SSP1-2.6 (Low emissions) -->
+    <path d="M 450 280 Q 600 250, 750 240 T 900 235" 
+          fill="none" stroke="#4575b4" stroke-width="2" stroke-dasharray="5,3"/>
+    
+    <!-- SSP2-4.5 (Medium emissions) -->
+    <path d="M 450 280 Q 600 220, 750 180 T 900 150" 
+          fill="none" stroke="#fdae61" stroke-width="2"/>
+    
+    <!-- SSP5-8.5 (High emissions) -->
+    <path d="M 450 280 Q 600 180, 750 100 T 900 50" 
+          fill="none" stroke="#d73027" stroke-width="2" stroke-dasharray="8,4"/>
+    
+    <!-- Precipitation trends (inverted scale) -->
+    <!-- Historical observed -->
+    <path d="M 0 200 L 150 210 L 300 225 L 450 245" 
+          fill="none" stroke="#8c510a" stroke-width="3" opacity="0.7"/>
+    
+    <!-- Future projections -->
+    <path d="M 450 245 Q 600 265, 750 285 T 900 310" 
+          fill="none" stroke="#8c510a" stroke-width="2" opacity="0.5" stroke-dasharray="5,3"/>
+    
+    <!-- Time axis labels -->
+    <text x="0" y="430" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">1960</text>
+    <text x="150" y="430" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">1980</text>
+    <text x="300" y="430" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2000</text>
+    <text x="450" y="430" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2c3e50">2020</text>
+    <text x="600" y="430" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2040</text>
+    <text x="750" y="430" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2060</text>
+    <text x="900" y="430" font-family="Arial" font-size="12" text-anchor="middle" fill="#2c3e50">2080</text>
+    
+    <!-- Y-axis labels (Temperature) -->
+    <text x="-20" y="405" font-family="Arial" font-size="12" text-anchor="end" fill="#2c3e50">0°C</text>
+    <text x="-20" y="305" font-family="Arial" font-size="12" text-anchor="end" fill="#2c3e50">+1°C</text>
+    <text x="-20" y="205" font-family="Arial" font-size="12" text-anchor="end" fill="#2c3e50">+2°C</text>
+    <text x="-20" y="105" font-family="Arial" font-size="12" text-anchor="end" fill="#2c3e50">+3°C</text>
+    <text x="-20" y="5" font-family="Arial" font-size="12" text-anchor="end" fill="#2c3e50">+4°C</text>
+    
+    <!-- Y-axis label -->
+    <text x="-50" y="200" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#d73027" transform="rotate(-90, -50, 200)">
+      Temperature Anomaly
+    </text>
+    
+    <!-- Secondary Y-axis labels (Precipitation) -->
+    <text x="920" y="205" font-family="Arial" font-size="12" text-anchor="start" fill="#8c510a">0%</text>
+    <text x="920" y="255" font-family="Arial" font-size="12" text-anchor="start" fill="#8c510a">-5%</text>
+    <text x="920" y="305" font-family="Arial" font-size="12" text-anchor="start" fill="#8c510a">-10%</text>
+    <text x="920" y="355" font-family="Arial" font-size="12" text-anchor="start" fill="#8c510a">-15%</text>
+    
+    <!-- Secondary Y-axis label -->
+    <text x="960" y="280" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" fill="#8c510a" transform="rotate(90, 960, 280)">
+      Precipitation Change
+    </text>
+    
+    <!-- Key events and thresholds -->
+    <line x1="450" y1="0" x2="450" y2="400" stroke="#ff0000" stroke-width="2"/>
+    <text x="450" y="-10" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" fill="#ff0000">Present</text>
+    
+    <!-- Paris Agreement targets -->
+    <line x1="0" y1="280" x2="900" y2="280" stroke="#22aa22" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+    <text x="910" y="283" font-family="Arial" font-size="10" fill="#22aa22">+1.5°C target</text>
+    
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#ff8800" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+    <text x="910" y="203" font-family="Arial" font-size="10" fill="#ff8800">+2.0°C target</text>
+  </g>
+  
+  <!-- Scenario Legend -->
+  <g transform="translate(1050, 150)">
+    <rect x="-10" y="-10" width="140" height="150" fill="white" stroke="#cccccc" stroke-width="1" rx="5"/>
+    
+    <text x="60" y="10" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+      Scenarios
+    </text>
+    
+    <line x1="10" y1="30" x2="40" y2="30" stroke="#333333" stroke-width="3"/>
+    <text x="45" y="35" font-family="Arial" font-size="12" fill="#2c3e50">Historical</text>
+    
+    <line x1="10" y1="55" x2="40" y2="55" stroke="#4575b4" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="45" y="60" font-family="Arial" font-size="12" fill="#4575b4">SSP1-2.6</text>
+    <text x="45" y="75" font-family="Arial" font-size="10" fill="#666">(Sustainable)</text>
+    
+    <line x1="10" y1="90" x2="40" y2="90" stroke="#fdae61" stroke-width="2"/>
+    <text x="45" y="95" font-family="Arial" font-size="12" fill="#fdae61">SSP2-4.5</text>
+    <text x="45" y="110" font-family="Arial" font-size="10" fill="#666">(Middle Road)</text>
+    
+    <line x1="10" y1="125" x2="40" y2="125" stroke="#d73027" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="45" y="130" font-family="Arial" font-size="12" fill="#d73027">SSP5-8.5</text>
+    <text x="45" y="145" font-family="Arial" font-size="10" fill="#666">(Fossil-fueled)</text>
+  </g>
+  
+  <!-- Impact Boxes -->
+  <g transform="translate(100, 550)">
+    <!-- Temperature Impacts -->
+    <rect x="0" y="0" width="280" height="150" fill="#fff7ec" stroke="#d73027" stroke-width="2" rx="5"/>
+    <text x="140" y="25" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#d73027">
+      Temperature Impacts by 2050
+    </text>
+    <text x="15" y="50" font-family="Arial" font-size="12" fill="#2c3e50">• Heat waves: +20-30 days/year</text>
+    <text x="15" y="70" font-family="Arial" font-size="12" fill="#2c3e50">• Growing season: -10 to -20 days</text>
+    <text x="15" y="90" font-family="Arial" font-size="12" fill="#2c3e50">• Evapotranspiration: +15-25%</text>
+    <text x="15" y="110" font-family="Arial" font-size="12" fill="#2c3e50">• Heat stress days: Double</text>
+    <text x="15" y="130" font-family="Arial" font-size="11" font-style="italic" fill="#666">Regional average under SSP2-4.5</text>
+  </g>
+  
+  <g transform="translate(420, 550)">
+    <!-- Precipitation Impacts -->
+    <rect x="0" y="0" width="280" height="150" fill="#fef0d9" stroke="#8c510a" stroke-width="2" rx="5"/>
+    <text x="140" y="25" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#8c510a">
+      Precipitation Impacts by 2050
+    </text>
+    <text x="15" y="50" font-family="Arial" font-size="12" fill="#2c3e50">• Drought frequency: +40%</text>
+    <text x="15" y="70" font-family="Arial" font-size="12" fill="#2c3e50">• Flood intensity: +25%</text>
+    <text x="15" y="90" font-family="Arial" font-size="12" fill="#2c3e50">• Dry spells: +15-20 days</text>
+    <text x="15" y="110" font-family="Arial" font-size="12" fill="#2c3e50">• Seasonal shift: 2-4 weeks</text>
+    <text x="15" y="130" font-family="Arial" font-size="11" font-style="italic" fill="#666">Higher variability expected</text>
+  </g>
+  
+  <g transform="translate(740, 550)">
+    <!-- Compound Impacts -->
+    <rect x="0" y="0" width="280" height="150" fill="#f0f9ff" stroke="#4575b4" stroke-width="2" rx="5"/>
+    <text x="140" y="25" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#4575b4">
+      Compound Risks by 2050
+    </text>
+    <text x="15" y="50" font-family="Arial" font-size="12" fill="#2c3e50">• Crop yields: -20% to -30%</text>
+    <text x="15" y="70" font-family="Arial" font-size="12" fill="#2c3e50">• Water availability: -25%</text>
+    <text x="15" y="90" font-family="Arial" font-size="12" fill="#2c3e50">• Migration risk: High</text>
+    <text x="15" y="110" font-family="Arial" font-size="12" fill="#2c3e50">• GDP impact: -5% to -8%</text>
+    <text x="15" y="130" font-family="Arial" font-size="11" font-style="italic" fill="#666">Without adaptation measures</text>
+  </g>
+  
+  <!-- Attribution -->
+  <text x="600" y="760" font-family="Arial" font-size="10" text-anchor="middle" fill="#999">
+    Data: IPCC AR6 WGI/II, CMIP6 Multi-model Ensemble, SADC Regional Climate Projections
+  </text>
+</svg>
