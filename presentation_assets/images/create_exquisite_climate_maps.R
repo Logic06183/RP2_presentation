@@ -210,22 +210,17 @@ create_exquisite_choropleth_map <- function(data, variable_col, period_name,
       st_drop_geometry() %>%
       select(iso_a3, lon, lat, climate_value, target_country)
     
-    # Create sophisticated choropleth map
+    # Create sophisticated choropleth map with integrated border styling
     p <- ggplot() +
-      # Main choropleth - countries filled with climate data colors
+      # Main choropleth with dynamic border styling (Figma-friendly)
       geom_sf(data = countries_with_data, 
-              aes(fill = climate_value),
-              color = "white", 
-              size = 0.3,
+              aes(fill = climate_value, 
+                  color = I(border_color), 
+                  size = I(border_width)),
               alpha = 0.9) +
       
-      # Target country emphasis with Figma-friendly styling
-      geom_sf(data = target_countries, 
-              fill = NA, 
-              color = "gray10", 
-              size = 1.0,
-              linetype = "solid",
-              alpha = 0.8) +
+      # Scale for border sizes (hidden)
+      scale_size_identity() +
       
       # Enhanced fill scale with scientific precision
       scale_fill_gradientn(
@@ -259,7 +254,7 @@ create_exquisite_choropleth_map <- function(data, variable_col, period_name,
       # Professional labeling
       labs(
         title = title_text,
-        subtitle = sprintf("%s • %s", period_name, "Target countries highlighted with thick borders"),
+        subtitle = sprintf("%s • %s", period_name, "Target countries emphasized with darker borders"),
         x = NULL, y = NULL
       ) +
       
@@ -365,13 +360,13 @@ create_exquisite_temperature_maps <- function() {
       )
     
     # Save publication-quality outputs
-    ggsave("exquisite_temperature_choropleth_maps.png", 
+    ggsave("figma_friendly_temperature_choropleth.png", 
            plot = combined,
            width = 20, height = 8, 
            dpi = 300, 
            bg = "white")
     
-    ggsave("exquisite_temperature_choropleth_maps.svg", 
+    ggsave("figma_friendly_temperature_choropleth.svg", 
            plot = combined,
            width = 20, height = 8, 
            bg = "white")
@@ -435,13 +430,13 @@ create_exquisite_precipitation_maps <- function() {
       )
     
     # Save publication-quality outputs
-    ggsave("exquisite_precipitation_choropleth_maps.png", 
+    ggsave("figma_friendly_precipitation_choropleth.png", 
            plot = combined,
            width = 20, height = 8, 
            dpi = 300, 
            bg = "white")
     
-    ggsave("exquisite_precipitation_choropleth_maps.svg", 
+    ggsave("figma_friendly_precipitation_choropleth.svg", 
            plot = combined,
            width = 20, height = 8, 
            bg = "white")
@@ -496,13 +491,13 @@ create_exquisite_vulnerability_maps <- function() {
       )
     
     # Save publication-quality outputs
-    ggsave("exquisite_vulnerability_choropleth_maps.png", 
+    ggsave("figma_friendly_vulnerability_choropleth.png", 
            plot = combined,
            width = 18, height = 10, 
            dpi = 300, 
            bg = "white")
     
-    ggsave("exquisite_vulnerability_choropleth_maps.svg", 
+    ggsave("figma_friendly_vulnerability_choropleth.svg", 
            plot = combined,
            width = 18, height = 10, 
            bg = "white")
@@ -528,15 +523,16 @@ vuln_success <- create_exquisite_vulnerability_maps()
 # Final summary
 cat("\n========================================\n")
 if (temp_success && precip_success && vuln_success) {
-  cat("🎯 ALL EXQUISITE CHOROPLETH MAPS COMPLETED SUCCESSFULLY\n")
+  cat("🎯 ALL FIGMA-FRIENDLY CHOROPLETH MAPS COMPLETED SUCCESSFULLY\n")
   cat("\nGenerated files:\n")
-  cat("• exquisite_temperature_choropleth_maps.png/svg\n")
-  cat("• exquisite_precipitation_choropleth_maps.png/svg\n") 
-  cat("• exquisite_vulnerability_choropleth_maps.png/svg\n")
+  cat("• figma_friendly_temperature_choropleth.png/svg\n")
+  cat("• figma_friendly_precipitation_choropleth.png/svg\n") 
+  cat("• figma_friendly_vulnerability_choropleth.png/svg\n")
   cat("\n✨ Publication-quality visualizations ready\n")
-  cat("📊 Following scientific visualization best practices\n")
+  cat("📊 Following scientific visualization best practices\n")  
   cat("🎨 Professional color schemes and typography\n")
   cat("🔬 Real data sources with proper attribution\n")
+  cat("🎯 Figma-friendly SVG structure - no black fill override issues\n")
 } else {
   cat("❌ Some exquisite maps failed to generate\n")
 }
