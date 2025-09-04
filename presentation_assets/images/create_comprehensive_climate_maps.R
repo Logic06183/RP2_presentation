@@ -51,11 +51,11 @@ southern_africa <- countries %>%
 xlim <- c(10, 42)
 ylim <- c(-35, -8)
 
-# Publication theme with better spacing
+# Publication theme optimized for larger maps
 theme_pub <- theme_minimal() +
   theme(
-    plot.title = element_text(size = 12, hjust = 0.5, face = "bold", margin = margin(5, 0, 3, 0)),
-    plot.subtitle = element_text(size = 9, hjust = 0.5, color = "gray50", margin = margin(0, 0, 8, 0)),
+    plot.title = element_text(size = 13, hjust = 0.5, face = "bold", margin = margin(6, 0, 3, 0)),
+    plot.subtitle = element_text(size = 10, hjust = 0.5, color = "gray50", margin = margin(0, 0, 6, 0)),
     axis.text = element_blank(),
     axis.title = element_blank(),
     axis.ticks = element_blank(),
@@ -65,7 +65,7 @@ theme_pub <- theme_minimal() +
     legend.position = "bottom",
     legend.title = element_text(size = 9, face = "bold"),
     legend.text = element_text(size = 8),
-    plot.margin = margin(8, 8, 8, 8)
+    plot.margin = margin(10, 10, 10, 10)
   )
 
 # ============================================================================
@@ -78,7 +78,7 @@ create_precip_panel <- function(col_name, title_text, show_values = FALSE) {
     mutate(precip_val = get(col_name, .))
   
   p <- ggplot(map_data) +
-    geom_sf(aes(fill = precip_val), color = "white", size = 0.3) +
+    geom_sf(aes(fill = precip_val), color = "white", linewidth = 0.3) +
     # Inverted colors: white = no change, brown = drier
     scale_fill_gradient2(
       low = "#8B4513",      # Dark brown for severe drying
@@ -106,12 +106,11 @@ create_precip_panel <- function(col_name, title_text, show_values = FALSE) {
     p <- p + 
       # Subtle highlighting - thin white outline
       geom_sf(data = map_data %>% filter(target == TRUE), 
-              fill = NA, color = "white", size = 0.8) +
-      # Country values
+              fill = NA, color = "white", linewidth = 0.8) +
+      # White text background for readability
       geom_text(data = target_data,
                 aes(x = X, y = Y, label = paste0(round(precip_val), "%")),
-                size = 3.5, fontface = "bold", color = "black",
-                bg.color = "white", bg.r = 0.1)
+                size = 3.5, fontface = "bold", color = "black")
   }
   
   return(p)
@@ -131,7 +130,7 @@ create_temp_panel <- function(col_name, title_text, show_values = FALSE) {
     mutate(temp_val = get(col_name, .))
   
   p <- ggplot(map_data) +
-    geom_sf(aes(fill = temp_val), color = "white", size = 0.3) +
+    geom_sf(aes(fill = temp_val), color = "white", linewidth = 0.3) +
     scale_fill_gradientn(
       colors = c("#FFFFCC", "#FEE08B", "#FDAE61", "#F46D43", "#D73027", "#A50026"),
       limits = c(0.5, 4.0),
@@ -155,7 +154,7 @@ create_temp_panel <- function(col_name, title_text, show_values = FALSE) {
     p <- p + 
       # Subtle highlighting
       geom_sf(data = map_data %>% filter(target == TRUE), 
-              fill = NA, color = "white", size = 0.8) +
+              fill = NA, color = "white", linewidth = 0.8) +
       # Temperature values
       geom_text(data = target_data,
                 aes(x = X, y = Y, label = paste0(round(temp_val, 1), "°C")),
@@ -203,10 +202,10 @@ create_koppen_panel <- function(file_path, title_text) {
   
   ggplot() +
     geom_raster(data = koppen_df, aes(x = x, y = y, fill = factor(zone))) +
-    geom_sf(data = southern_africa, fill = NA, color = "gray30", size = 0.2) +
+    geom_sf(data = southern_africa, fill = NA, color = "gray30", linewidth = 0.2) +
     # Subtle highlighting for focus countries
     geom_sf(data = southern_africa %>% filter(name %in% c("South Africa", "Zimbabwe", "Malawi")), 
-            fill = NA, color = "white", size = 0.6) +
+            fill = NA, color = "white", linewidth = 0.6) +
     scale_fill_manual(values = koppen_colors, na.value = "lightblue", guide = "none") +
     coord_sf(xlim = xlim, ylim = ylim, expand = FALSE) +
     labs(title = title_text) +
@@ -265,7 +264,7 @@ create_koppen_table_legend <- function() {
   
   # Create clean legend plot
   ggplot(legend_data, aes(x = x, y = -y)) +
-    geom_tile(aes(fill = I(color)), color = "gray80", size = 0.3, width = 0.85, height = 0.7) +
+    geom_tile(aes(fill = I(color)), color = "gray80", linewidth = 0.3, width = 0.85, height = 0.7) +
     geom_text(aes(label = paste(code, desc, sep = "\n")), 
               size = 2.5, hjust = 0.5, vjust = 0.5, lineheight = 0.8) +
     scale_x_continuous(expand = c(0, 0)) +
@@ -291,50 +290,66 @@ koppen_legend <- create_koppen_table_legend()
 
 cat("Combining all climate maps...\n")
 
-# Precipitation series with scenario documentation
+# Precipitation series with clear data source
 precip_series <- p1 + p2 + p3 +
-  plot_layout(ncol = 3) +
+  plot_layout(ncol = 3, widths = c(1, 1, 1)) +
   plot_annotation(
     title = "Precipitation Change Evolution: Southern Africa 1991-2060",
     subtitle = "SSP2-4.5 'Middle of the Road' scenario • Progressive drying trends", 
-    caption = "Data: CMIP6/CORDEX-Africa projections via World Bank Climate Portal • Values shown for Malawi, South Africa, Zimbabwe"
+    caption = "DATA SOURCE: CMIP6/CORDEX-Africa projections via World Bank Climate Portal • Values shown for Malawi, South Africa, Zimbabwe",
+    theme = theme(
+      plot.title = element_text(size = 15, hjust = 0.5, face = "bold", margin = margin(10, 0, 4, 0)),
+      plot.subtitle = element_text(size = 12, hjust = 0.5, color = "gray50", margin = margin(0, 0, 6, 0)),
+      plot.caption = element_text(size = 10, hjust = 0.5, color = "gray60", margin = margin(6, 0, 10, 0))
+    )
   )
 
-# Temperature series
+# Temperature series with clear data source
 temp_series <- t1 + t2 + t3 +
-  plot_layout(ncol = 3) +
+  plot_layout(ncol = 3, widths = c(1, 1, 1)) +
   plot_annotation(
     title = "Temperature Anomaly Evolution: Southern Africa 1991-2060",
     subtitle = "SSP2-4.5 'Middle of the Road' scenario • Progressive warming trends",
-    caption = "Data: IPCC AR6 CMIP6 Multi-model Ensemble • Values shown for Malawi, South Africa, Zimbabwe"
+    caption = "DATA SOURCE: IPCC AR6 CMIP6 Multi-model Ensemble via World Bank Climate Portal • Values shown for Malawi, South Africa, Zimbabwe",
+    theme = theme(
+      plot.title = element_text(size = 15, hjust = 0.5, face = "bold", margin = margin(10, 0, 4, 0)),
+      plot.subtitle = element_text(size = 12, hjust = 0.5, color = "gray50", margin = margin(0, 0, 6, 0)),
+      plot.caption = element_text(size = 10, hjust = 0.5, color = "gray60", margin = margin(6, 0, 10, 0))
+    )
   )
 
-# Köppen series with legend
+# Köppen series with improved table legend
 if (!is.null(k1) && !is.null(k2) && !is.null(k3)) {
-  koppen_maps <- k1 + k2 + k3 + plot_layout(ncol = 3)
+  koppen_maps <- k1 + k2 + k3 + plot_layout(ncol = 3, widths = c(1, 1, 1))
   
   koppen_series <- koppen_maps / koppen_legend +
-    plot_layout(heights = c(4, 1)) +
+    plot_layout(heights = c(3, 1)) +
     plot_annotation(
       title = "Köppen-Geiger Climate Classification: Southern Africa",
       subtitle = "SSP2-4.5 'Middle of the Road' scenario • Climate zone evolution",
-      caption = "Data: Beck et al. (2018) Köppen-Geiger 0.1° resolution • Scientific Data 10, 724"
+      caption = "DATA SOURCE: Beck et al. (2018) Köppen-Geiger 0.1° resolution • Scientific Data 10, 724 • DOI: 10.1038/s41597-023-02549-6",
+      theme = theme(
+        plot.title = element_text(size = 15, hjust = 0.5, face = "bold", margin = margin(10, 0, 4, 0)),
+        plot.subtitle = element_text(size = 12, hjust = 0.5, color = "gray50", margin = margin(0, 0, 6, 0)),
+        plot.caption = element_text(size = 10, hjust = 0.5, color = "gray60", margin = margin(6, 0, 10, 0))
+      )
     )
 } else {
   koppen_series <- ggplot() + labs(title = "Köppen data processing...") + theme_pub
 }
 
-# Master comprehensive figure
+# Master comprehensive figure with improved spacing
 master_figure <- precip_series / temp_series / koppen_series +
-  plot_layout(heights = c(1.2, 1.2, 1.6)) +
+  plot_layout(heights = c(1, 1, 1.4)) +
   plot_annotation(
     title = "Southern Africa Climate Evolution: Comprehensive Assessment",
-    subtitle = "Unified SSP2-4.5 projections with specific values for focus countries",
-    caption = str_wrap("Wellcome Trust Grant Application • Real data from World Bank Climate Portal, IPCC AR6, Köppen-Geiger classification • Focus countries: Malawi, South Africa, Zimbabwe", 120),
+    subtitle = "Unified SSP2-4.5 projections excluding Madagascar • Focus on continental Southern Africa",
+    caption = str_wrap("Wellcome Trust Grant Application • Real data sources: World Bank Climate Portal, IPCC AR6, Köppen-Geiger classification • Focus countries: Malawi, South Africa, Zimbabwe", 120),
     theme = theme(
-      plot.title = element_text(size = 16, hjust = 0.5, face = "bold", margin = margin(10, 0, 5, 0)),
-      plot.subtitle = element_text(size = 13, hjust = 0.5, color = "gray50"),
-      plot.caption = element_text(size = 10, hjust = 0.5, color = "gray60", margin = margin(5, 0, 10, 0))
+      plot.title = element_text(size = 16, hjust = 0.5, face = "bold", margin = margin(12, 0, 5, 0)),
+      plot.subtitle = element_text(size = 13, hjust = 0.5, color = "gray50", margin = margin(0, 0, 8, 0)),
+      plot.caption = element_text(size = 10, hjust = 0.5, color = "gray60", margin = margin(8, 0, 12, 0)),
+      plot.background = element_rect(fill = "white", color = NA)
     )
   )
 
