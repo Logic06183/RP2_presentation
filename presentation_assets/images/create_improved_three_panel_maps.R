@@ -93,8 +93,7 @@ create_precip_panel <- function(change_col, title_text) {
     # Add percentage labels on countries
     geom_text(data = map_data %>% filter(!is.na(change_value) & is_target == TRUE),
               aes(label = paste0(round(change_value), "%")),
-              size = 3, fontface = "bold", color = "white", 
-              stroke = 0.2, stroke_color = "black") +
+              size = 3, fontface = "bold", color = "white") +
     coord_sf(xlim = xlim, ylim = ylim, expand = FALSE) +
     labs(title = title_text) +
     theme_pub +
@@ -168,8 +167,7 @@ create_temp_panel <- function(temp_col, title_text) {
     # Add temperature labels on countries
     geom_text(data = map_data %>% filter(!is.na(temp_value) & is_target == TRUE),
               aes(label = paste0(round(temp_value, 1), "°C")),
-              size = 3, fontface = "bold", color = "white",
-              stroke = 0.2, stroke_color = "black") +
+              size = 3, fontface = "bold", color = "white") +
     coord_sf(xlim = xlim, ylim = ylim, expand = FALSE) +
     labs(title = title_text) +
     theme_pub +
